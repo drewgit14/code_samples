@@ -1,0 +1,498 @@
+---
+title: "Final Project Part 1"
+author: "Andrew Marshall"
+date: "12/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,Load libraries, echo=FALSE, include=FALSE}
+#load libs
+#data manipulation and visuals
+library(caret)
+library(tidyverse)
+library(GGally)
+library(reshape2)
+library(ROCR)
+#recursive partitioning
+library(rpart)
+library(rpart.plot)
+library(partykit)
+library("mlbench")
+library("vcd")
+library("lattice")
+library("randomForest")
+library("party")
+library("mboost")
+library("TH.data")
+library("ipred")
+```
+
+
+```{r, Load data}
+data("microtus",package = "Flury")
+
+```
+
+
+#Exploratory Analysis
+#Univaritate
+```{r, echo=FALSE}
+summary(microtus)
+#Group classifications balanced no need for resampling methods to balance classifications
+#str(microtus)
+
+#visualize numerica variables
+ggpairs(data = microtus, title = "Microtus Summary", 
+        mapping=ggplot2::aes(colour = Group))
+#there is some overlap between the two groups in each of the numeric variables
+#there also appears to be a fair amount of correlation between numeric variables which is to be expected as teeth can be expected to grow at the same pace given the health of the animal
+
+#closer look at conditional data
+counter = 0
+microtus_num_colnames <- colnames(microtus[2:9])
+for (i in microtus[microtus_num_colnames]){
+  counter = counter + 1
+  microtus_box_plot <- ggplot(data = microtus, aes(x = Group, y = i, color = Group)) +
+  geom_boxplot() +
+  ggtitle(microtus_num_colnames[as.integer(counter)])
+  print (microtus_box_plot)
+}
+#M1, length, height, rostrum may be good predictors due to their lack of overlap with each other
+```
+```{r, echo=FALSE}
+#conditional density plots
+counter = 0
+#subset to just numerical columns
+microtus_num_colnames <- colnames(microtus[2:9])
+for (i in microtus[microtus_num_colnames]){
+  counter = counter + 1
+  microtus_cond_density <- ggplot(data = microtus, aes(i, color = Group)) +
+  geom_density() +
+  ggtitle(microtus_num_colnames[as.integer(counter)])
+  print (microtus_cond_density)
+}
+#quite a bit of overlap in conditional density curves between labled groups. 
+#all groups can approximate normal
+#these visuals help confirm the results from the box plots
+```
+
+#correlation analysis
+#variables selection
+```{r, echo=FALSE}
+#reference https://machinelearningmastery.com/feature-selection-with-the-caret-r-package/
+#correlation analysis
+#variables selection
+#variable selection
+#library(reshape2)
+
+#subset numeric variables so that findcorrelation index lines up
+microtus_numeric <- as.data.frame(microtus[,2:9])
+#build correlation matrix
+correlationMatrix <- cor(microtus[,2:9])
+#melt(correlationMatrix)
+#head(correlationMatrix)
+
+# find attributes that are highly corrected (ideally >0.75)
+highlyCorrelated <- findCorrelation(correlationMatrix, cutoff=0.75)
+
+# get colnames of highly correlated variables from numeric dataset
+cor_vars <- (colnames(microtus_numeric[,highlyCorrelated]))
+
+#create a new dataset of uncorrelated variabels
+microtus_uncor <- microtus[,!(names(microtus)%in% cor_vars)]
+#head(microtus_uncor)
+```
+
+#build base models
+#logistic regression
+```{r, echo=FALSE}
+#build training and test data sets
+#subset data out data that is not labelled (unknown)
+#colnames(microtus_uncor)
+dataset_subset_uncor <- microtus_uncor %>% 
+  dplyr::filter(Group != "unknown")
+#drop unused levels
+dataset_subset_uncor <- droplevels(dataset_subset_uncor)
+summary(dataset_subset_uncor)
+```
+
+```{r, echo=FALSE}
+#create train and test datasets 
+#reference https://topepo.github.io/caret/data-splitting.html
+#set training data sset to 50% and use cross validation n= 10 to keep a larger data set for testing
+trainIndex <- createDataPartition(dataset_subset_uncor$Group, p = .6, 
+                                  list = FALSE, 
+                                  times = 1)
+microtus_Train <- dataset_subset_uncor[ trainIndex,]
+microtus_Test  <- dataset_subset_uncor[-trainIndex,]
+
+#binary lables to pass to ROCR for ROC curve
+microtus_Train <- microtus_Train %>% mutate(
+  group_flag = if_else(Group == "multiplex", 1, 0)
+)
+#binary lables to pass to ROCR for ROC curve
+microtus_Test <- microtus_Test %>% mutate(
+  group_flag = if_else(Group == "multiplex", 1, 0)
+)
+
+#separate data set with no flag
+microtus_Train_no_flag <- microtus_Train[,1:5]
+#separate data set with no flag
+microtus_Test_no_flag <- microtus_Test[,1:5]
+```
+
+```{r, echo=FALSE}
+#add fit control to cross validate model k-fold n= 10
+fitControl <- trainControl(method="cv", number=10, classProbs = TRUE)
+
+#fit model glm model accruacy metric 
+glm_1 <- train(Group~.,data = microtus_Train_no_flag, method="glm", metric="Accuracy", trControl= fitControl)
+
+#print(glm_1)
+summary(glm_1)
+
+#Make predictions and generate confustion matrix for evaluation
+glm_1_pred <- predict(glm_1, type = "raw")
+glm_1_pred_cf <- confusionMatrix(data = glm_1_pred, reference = microtus_Train$Group)
+#str(glm_1_pred_cf)
+glm_1_pred_cf$overall
+
+#Commentary: Only one variable hight is significant at .10.
+#further variable selection is needed.
+```
+
+#Manual Feature Elimination
+```{r, echo =FALSE}
+
+#registerDoSEQ() 
+#manually removed insignificant variables
+glm_2 <- train(Group ~ Height,data = microtus_Train_no_flag, method="glm", metric="Accuracy", trControl= fitControl)
+#print(glm_2)
+summary(glm_2)
+
+#Make predictions and generate confustion matrix for evaluation
+glm_2_pred <- predict(glm_2, type = "raw")
+glm_2_pred_cf <- confusionMatrix(data = glm_2_pred, reference = microtus_Train$Group)
+
+#Further analysis is needed due to the drop in accuracy of the model with the 
+#drop in accuracy
+```
+
+#Built in Feature selection with glmnet
+```{r, echo=FALSE}
+#reference https://www.rdocumentation.org/packages/caret/versions/6.0-77/topics/trainControl
+#use glmnet (logistic with lasso)
+#cv = crossval, number= folds
+#tunegrid gives input for alpha and lambda tuning for lasso calcs
+fit_Control_glmnet <- trainControl(method = "cv", number = 10, returnResamp = "all", classProbs = TRUE, summaryFunction = twoClassSummary)
+
+glm_3 <- train(Group ~ .,data = microtus_Train_no_flag, 
+               method="glmnet",
+               metric="ROC",
+               trControl= fit_Control_glmnet,
+#tunegrid gives input for alpha and lambda tuning for lasso calcs
+               tuneGrid = expand.grid(.alpha = seq(.05, 1, length = 15),
+                                                    .lambda = c((1:5)/10)))
+#print(glm_3)
+#glm_3$coefnames
+#summary(glm_3)
+coef(glm_3$finalModel, glm_3$bestTune$lambda)
+
+#Make predictions and generate confustion matrix for evaluation
+glm_3_pred <- predict(glm_3, type = "raw")
+glm_3_pred_cf <- confusionMatrix(data = glm_3_pred, reference = microtus_Train$Group)
+
+#model accuracy increased buy will try a tree method to see if there are some better options to increase 
+```
+
+#GLM Summary
+```{r}
+#binary lables to pass to ROCR for ROC curve
+microtus_Train <- microtus_Train %>% mutate(
+  group_flag = if_else(Group == "multiplex", 1, 0)
+)
+
+#create predictions with probabilities
+glm_1_pred = predict(glm_1, type = "prob")
+glm_2_pred = predict(glm_2, type = "prob")
+glm_3_pred = predict(glm_3, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_1 <- prediction(glm_1_pred$multiplex, as.numeric(microtus_Train$group_flag))
+pred_2 <- prediction(glm_2_pred$multiplex, as.numeric(microtus_Train$group_flag))
+pred_3 <- prediction(glm_3_pred$multiplex, as.numeric(microtus_Train$group_flag))
+
+#?performance
+roc.perf_1 <- performance(pred_1, measure = "tpr", x.measure = "fpr")
+roc.perf_1_AUC <- performance(pred_1, measure = "auc")
+glm_1_pred_AUC<- roc.perf_1_AUC@y.values
+
+roc.perf_2 <- performance(pred_2, measure = "tpr", x.measure = "fpr")
+roc.perf_2_AUC <- performance(pred_2, measure = "auc")
+glm_2_pred_AUC<- roc.perf_2_AUC@y.values
+
+roc.perf_3 <- performance(pred_3, measure = "tpr", x.measure = "fpr")
+roc.perf_3_AUC <- performance(pred_3, measure = "auc")
+glm_3_pred_AUC<- roc.perf_3_AUC@y.values
+
+
+#calc AUC
+"glm_1_pred_AUC"
+glm_1_pred_AUC
+"glm_2_pred_AUC"
+glm_2_pred_AUC
+"glm_3_pred_AUC"
+glm_3_pred_AUC
+
+#plot data
+par(mfrow=c(1,3))
+plot(roc.perf_1, main = "glm_1")
+abline(0,1)
+plot(roc.perf_2, main = "glm_2")
+abline(0,1)
+plot(roc.perf_3, main = "glm_3")
+abline(0,1)
+```
+
+#Tree Based Methods (recursive partitioning )
+```{r, echo=FALSE}
+#reference http://dataaspirant.com/2017/02/03/decision-tree-classifier-implementation-in-r/
+seed <- set.seed(seed = 929270)
+
+#separate data set with no flag
+microtus_Train_no_flag <- microtus_Train[,1:5]
+
+#set tree control structure
+tree_ctrl <- trainControl(method = "cv", number = 10, 
+                          returnResamp = "all",
+                          classProbs = TRUE, 
+                          summaryFunction = twoClassSummary,
+                          seeds = seed)
+
+microtus_rpart <- train(Group ~ ., data = microtus_Train_no_flag, 
+                        method = "rpart",
+                        parms = list(split = "information"),
+                        trControl=tree_ctrl,
+                        tuneLength = 10)
+
+#microtus_rpart
+prp(microtus_rpart$finalModel, type = 4)
+
+#plot(as.party(microtus_rpart), 
+#      tp_args = list(id = FALSE))
+
+#Commentary height and M3Left still both top predictors for the tree model
+```
+```{r, echo=FALSE}
+#Calculate Area Under the Curve for model
+
+microtus_rpart_pred <- predict(microtus_rpart, newdata = microtus_Train_no_flag)
+microtus_rpart_pred_cf <- confusionMatrix(microtus_rpart_pred, microtus_Train_no_flag$Group)
+
+#create predictions with probabilities
+microtus_rpart_pred = predict(microtus_rpart, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_rpart <- prediction(microtus_rpart_pred$multiplex, as.numeric(microtus_Train$group_flag))
+
+roc.microtus_rpart_pred <- performance(pred_rpart, measure = "tpr", x.measure = "fpr")
+
+#plot data
+#par(mfrow=c(1,3))
+plot(roc.microtus_rpart_pred, main = "roc.microtus_rpart_pred")
+abline(0,1)
+
+roc.microtus_rpart_AUC <- performance(pred_rpart, measure = "auc")
+microtus_rpart_pred_AUC<- roc.microtus_rpart_AUC@y.values
+microtus_rpart_pred_AUC
+```
+```{r}
+tree_ctrl <- trainControl(method = "cv", number = 10, 
+                          returnResamp = "all",
+                          classProbs = TRUE, 
+                          summaryFunction = twoClassSummary,
+                          seeds = seed)
+#treebag method used
+microtus_tree_bag <- train(Group ~ .,
+                           data = microtus_Train_no_flag,
+                           method = "treebag",
+                           trControl = tree_ctrl,
+                           metric = "ROC",
+                           nbagg = 10)
+
+#microtus_tree_bag
+#summary(microtus_tree_bag)
+
+microtus_tree_bag_pred <- predict(microtus_tree_bag, newdata = microtus_Train_no_flag)
+microtus_tree_bag_pred_cf <- confusionMatrix(microtus_tree_bag_pred, microtus_Train_no_flag$Group)
+```
+
+```{r}
+#Calculate Area Under the Curve for model
+
+microtus_tree_bag_pred <- predict(microtus_tree_bag, newdata = microtus_Train_no_flag)
+
+#confusionMatrix(microtus_tree_bag_pred, microtus_Train_no_flag$Group)
+
+#create predictions with probabilities
+microtus_tree_bag_pred = predict(microtus_tree_bag, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_tree_bag <- prediction(microtus_tree_bag_pred$multiplex, as.numeric(microtus_Train$group_flag))
+
+roc.microtus_tree_bag_pred <- performance(pred_rpart, measure = "tpr", x.measure = "fpr")
+
+#plot data
+#par(mfrow=c(1,3))
+plot(roc.microtus_tree_bag_pred, main = "roc.microtus_rpart_pred")
+abline(0,1)
+
+roc.microtus_tree_bag_pred_AUC <- performance(pred_tree_bag, measure = "auc")
+microtus_tree_bag_pred_AUC<- roc.microtus_tree_bag_pred_AUC@y.values
+microtus_tree_bag_pred_AUC
+```
+
+#recursive feature elimination wrapper method to fit random forest
+```{r}
+# define the control using a recursive feature elimination (backwards) selection function
+
+# define the control using a random forest selection function
+rfe_controller <- rfeControl(functions=rfFuncs, method="cv", number=10)
+# run the RFE algorithm
+x=microtus_Train_no_flag[,2:5]
+y=microtus_Train_no_flag[,1]
+rfe_results <- rfe(x=x, y, sizes=c(1:4), rfeControl=rfe_controller)
+# summarize the results
+print(rfe_results)
+# list the chosen features
+#predictors(rfe_results)
+# plot the results
+plot(rfe_results, type=c("g", "o"))
+rfe_results
+
+microtus_tree_ranFor_rfe <- rfe_results$fit
+microtus_tree_ranFor_rfe
+
+#microtus_tree_ranForRFE_pred
+```
+
+```{r, echo=FALSE}
+tree_ctrl <- trainControl(method = "cv", number = 10, 
+                          returnResamp = "all",
+                          classProbs = TRUE, 
+                          summaryFunction = twoClassSummary,
+                          seeds = seed)
+
+microtus_tree_ranFor <- train(Group ~ .,
+                           data = microtus_Train_no_flag,
+                           method = "rf",
+                           trControl = tree_ctrl,
+                           metric = "ROC",
+                           ntree = 50)
+
+microtus_tree_ranFor_pred <- predict(microtus_tree_ranFor, newdata = microtus_Train_no_flag)
+microtus_tree_ranFor_pred_cf <- confusionMatrix(microtus_tree_ranFor_pred, microtus_Train_no_flag$Group)
+```
+
+```{r}
+#Calculate Area Under the Curve for model
+
+microtus_tree_ranFor_pred <- predict(microtus_tree_ranFor, newdata = microtus_Train_no_flag)
+
+#confusionMatrix(microtus_tree_ranFor_pred, microtus_Train_no_flag$Group)
+#create predictions with probabilities
+microtus_tree_ranFor_pred = predict(microtus_tree_ranFor, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_tree_ranFor <- prediction(microtus_tree_ranFor_pred$multiplex, as.numeric(microtus_Train$group_flag))
+
+roc.microtus_tree_ranFor_pred <- performance(pred_tree_ranFor, measure = "tpr", x.measure = "fpr")
+
+#plot data
+#par(mfrow=c(1,3))
+plot(roc.microtus_tree_ranFor_pred, main = "roc.microtus_rpart_pred")
+abline(0,1)
+
+roc.microtus_tree_ranFor_pred_AUC <- performance(pred_tree_ranFor, measure = "auc")
+microtus_tree_ranFor_pred_AUC<- roc.microtus_tree_ranFor_pred_AUC@y.values
+microtus_tree_ranFor_pred_AUC
+```
+
+```{r}
+#Classification Metrics
+"glm_1_pred_cf"
+glm_1_pred_cf$overall
+"glm_2_pred_cf"
+glm_2_pred_cf$overall
+"glm_3_pred_cf"
+glm_3_pred_cf$overall
+"microtus_rpart_pred_cf"
+microtus_rpart_pred_cf$overall
+"microtus_tree_bag_pred_cf"
+microtus_tree_bag_pred_cf$overall
+"microtus_tree_ranFor_pred_cf"
+microtus_tree_ranFor_pred_cf$overall
+```
+
+
+## fit best training models to test datasets
+```{r}
+#glmnet
+glm_3_test_pred <- predict(glm_3, newdata = microtus_Test, type = "raw")
+glm_3_test_pred_cf <- confusionMatrix(data = glm_3_test_pred, reference = microtus_Test$Group)
+
+glm_3_test_pred <- predict(glm_3, newdata = microtus_Test, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_glm_3_test <- prediction(glm_3_test_pred$multiplex, as.numeric(microtus_Test$group_flag))
+
+glm_3_test_pred_AUC <- performance(pred_glm_3_test, measure = "auc")
+glm_3_test_pred_AUC@y.values
+
+
+#bagged Tree
+microtus_tree_bag_test_pred <- predict(microtus_tree_bag, newdata = microtus_Test)
+microtus_tree_bag_test_pred_cf <- confusionMatrix(microtus_tree_bag_test_pred, microtus_Test$Group)
+
+microtus_tree_bag_test_pred <- predict(microtus_tree_bag, newdata = microtus_Test, type = "prob")
+
+#create prediction objects with multiplex column (note need to select just one column)
+pred_tree_bag_test <- prediction(microtus_tree_bag_test_pred$multiplex, as.numeric(microtus_Test$group_flag))
+
+tree_bag_test_AUC <- performance(pred_glm_3_test, measure = "auc")
+tree_bag_test_AUC@y.values
+
+#Random Forest
+microtus_tree_ranFor_test_pred <- predict(microtus_tree_ranFor, newdata = microtus_Test)
+microtus_tree_ranFor_test_pred_cf <- confusionMatrix(microtus_tree_ranFor_test_pred, microtus_Test$Group)
+
+# microtus_tree_ranFor_test_pred <- predict(microtus_tree_ranFor, newdata = microtus_Test, type = "prob")
+# #create prediction objects with multiplex column (note need to select just one column)
+# pred_tree_ranFor_test <- prediction(microtus_tree_ranFor_test_pred$multiplex, as.numeric(microtus_Test$group_flag))
+# 
+# microtus_tree_ranFor_test_pred_cf <- confusionMatrix(pred_tree_ranFor_test, microtus_Test$Group)
+```
+
+```{r}
+glm_3_test_pred_cf$overall
+microtus_tree_bag_test_pred_cf$overall
+microtus_tree_ranFor_test_pred_cf$overall
+```
+
+##use GLMNET to predict all classes based on Kappa Score
+```{r}
+# microtus <- microtus %>% mutate(
+#   final_pred_flag = if_else(microtus$Group == "unknown",1,0))
+
+microtus <- microtus %>% mutate(
+  final_pred = if_else(microtus$Group == "unknown",
+                       predict(glm_3, newdata = microtus),
+                       microtus$Group))
+summary(microtus)
+```
+
+

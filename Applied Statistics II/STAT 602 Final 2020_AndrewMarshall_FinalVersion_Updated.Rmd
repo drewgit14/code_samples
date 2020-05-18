@@ -1,0 +1,838 @@
+---
+title: "STAT 602 Final Project"
+author: "Andrew Marshall"
+date: "05/02/2020"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+editor_options:
+  chunk_output_type: console
+---
+---
+
+```{r setup, include=FALSE}
+rm(list=ls()) # “Clear current R environment”
+knitr::opts_chunk$set(echo = F,warning=F,message=F)
+
+```
+
+
+## Code to enable parallel processing
+```{r, enable parallel processing, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://topepo.github.io/caret/parallel-processing.html
+
+library(doParallel)
+cl <- makePSOCKcluster(8)
+registerDoParallel(cl)
+
+
+```
+
+
+```{r}
+# End Parallel Processing (for testing)
+#stopCluster(cl)
+
+```
+
+## DataSet and Library Import
+
+```{r,Library Import, include=T,echo=F,warning=FALSE,message=F}
+library(readr)
+library(caret)
+library(knitr)
+library(kableExtra)
+library(DataExplorer)
+```
+
+
+```{r, Import Labeled Data, include=T,echo=F,warning=FALSE,message=F}
+labeled.dat=read.csv("labeled.csv", stringsAsFactors=F)
+
+#Delete X variabkes column
+labeled.dat <- subset(labeled.dat, select = -c(X))
+
+### change Print Head of Data in kable tables with captions, 3 rows in headers, 4-8 vars per table
+head.tab1a <- (head(labeled.dat[,1:8],3))
+kable(head.tab1a, caption = "First 8 vars of 'labeled.csv' dataset") 
+
+head.tab1b <- (head(labeled.dat[,9:14],3))
+kable(head.tab1b, caption = "Second 6 vars of 'labeled.csv' dataset")
+
+head.tab1c <- (head(labeled.dat[,16:18],3))
+kable(head.tab1c, caption=" Third 4 vars of 'labeled.csv' dataset")
+
+head.tab1d <- (head(labeled.dat[,19:24],3))
+kable(head.tab1c, caption="Last 6 vars of 'labeled.csv' dataset")
+
+
+shape.labeled.dat <- dim(labeled.dat)
+
+```
+
+The data has `r shape.labeled.dat[[1]]` observations with `r shape.labeled.dat[[2]]` variables. It has $5$ categorical variables and $26$ continuous variables.   
+
+
+```{r, Initial dataset summary, include=T,echo=F,warning=FALSE,message=F}
+head(labeled.dat)
+summary(labeled.dat)
+```
+
+
+## Drop these 2 columns because no predictive value available (0)
+```{r, drop variables}
+#labeled.dat <- labeled.dat[, -c(18,19)] 
+labeled.dat <- subset(labeled.dat,select =  -c(18,19)) 
+
+#dataset summary after column removal
+head(labeled.dat)
+summary(labeled.dat)
+
+```
+
+
+Change the data type of categorical variables allows for more efficient data handling.
+
+```{r, Data Conversion, include=T,echo=F,warning=FALSE,message=F}
+
+labeled.dat$Group <- as.factor(labeled.dat$Group) 
+labeled.dat$Subject <- as.factor(labeled.dat$Subject) 
+labeled.dat$Condition <- as.factor(labeled.dat$Condition) 
+labeled.dat$Trial <- as.factor(labeled.dat$Trial) 
+#labeled.dat$Segment <- as.factor(labeled.dat$Segment) 
+#labeled.dat$Direction <- as.factor(labeled.dat$Direction) 
+
+
+str(labeled.dat)
+head(labeled.dat)
+summary(labeled.dat)
+```
+
+```{r, create new array variables}
+ lab.dat.means <- NULL
+ inde.vars <- NULL
+```
+
+```{r, Combine categorical variables into one variable for mean calcuation}
+index.var <- apply(labeled.dat[, 1:4], 1, paste, collapse = ":")
+#table(index.var)
+uni.vars <- unique(index.var)
+
+
+head(index.var)
+summary(index.var)
+```
+
+
+```{r, Calculate means for continuous variable columns}
+for (i in uni.vars){
+labeled.dat.i=labeled.dat[i==index.var, ]
+lab.mean.i=colMeans(labeled.dat.i[,-(1:4)])
+inde.vars=rbind(inde.vars, labeled.dat.i[1,(1:4)])
+lab.dat.means=rbind(lab.dat.means, lab.mean.i)
+}
+cbind(colnames(lab.dat.means))
+str(lab.dat.means)
+str(inde.vars)
+```
+
+```{r, Recreate labeled.dat dataset with mean data }
+#labeled.dat <- cbind(unique(labeled.dat[,1:4]),lab.dat.means)
+labeled.dat <- cbind(inde.vars,lab.dat.means)
+#labeled.dat <- as.data.frame(labeled.dat)
+head(labeled.dat)
+#dim(lab.dat.means)
+```
+
+
+## Data Exploration for "main" dataset
+DataExplorer within the caret package was used to visualize the distribution of the variables, along with looking at their related correlations.
+
+```{r exploratory data analysis - Before, echo=FALSE, fig.height=4.5}
+#Code source: https://cran.r-project.org/web/packages/DataExplorer/vignettes/dataexplorer-intro.html
+
+#density plot
+DataExplorer::plot_density(labeled.dat) #Commented out 05/06/2020
+
+#correlation plot of continuous
+DataExplorer::plot_correlation(labeled.dat, type = "continuous") #Commented out 05/06/2020
+
+#boxplot based on Group
+DataExplorer::plot_boxplot(labeled.dat, by = "Group") 
+
+
+```
+
+## Data Transformation
+
+Based on the above plots it is apparent I need to standardize the continuous data. I chose to use the centering and scaling preprocess functions found in the 'caret' library. I have chosen to leave the outliers in the data, and have not imputed values on them. This maybe explored later, if there are any adverse side-effects found in the data.
+
+```{r, Data Transformation, standardizing}
+
+#Center and Scale Transform Model on continous Variables
+center.scale.trnfm <- caret::preProcess(labeled.dat[,-(1:4)], method = c("center", "scale"))
+
+# Apply Model to Data i.e. Continous Variables
+scaled.Data <- stats::predict(center.scale.trnfm, newdata = labeled.dat[,-(1:4)])
+
+#data.transformed <- scaled.Data
+
+
+data.transformed <- cbind(labeled.dat[,1:4],scaled.Data)
+
+#data.transformed <- cbind(inde.vars = main.dat$inde.vars,scaled.Data)
+head(data.transformed)
+summary(data.transformed)
+dim(data.transformed)
+
+
+
+
+```
+
+\newpage
+
+## Splitting Dataset into Training dataset and Test dataset
+
+I decided to use the *createDataPartition* function in *caret* to generate stratified samples of the data to be used as the training dataset and testing dataset.
+"Subject" variable will not be used since it has too many levels and therefore would not be a viable categorical variable.
+```{r Split data into Training and Test datasets, include=F,echo=F,warning=F,message=F}
+set.seed(702)
+
+#partition data - Group
+inTrain.group <- createDataPartition(data.transformed$Group, p = 0.8, list = FALSE,times = 1)
+#head(dfTrain)
+dfTrain.group <- data.transformed[inTrain.group,]
+str(dfTrain.group)
+dfTest.group <- data.transformed[-inTrain.group,]
+str(dfTest.group)
+
+
+#partition data - Subject
+inTrain.subject <- createDataPartition(data.transformed$Subject, p = 0.8, list = FALSE,times = 1)
+#head(dfTrain)
+dfTrain.subject <- data.transformed[inTrain.subject,]
+str(dfTrain.subject)
+dfTest.subject <- data.transformed[-inTrain.subject,]
+str(dfTest.subject)
+
+#partition data - Condition
+inTrain.condition <- createDataPartition(data.transformed$Condition, p = 0.8, list = FALSE,times = 1)
+#head(dfTrain)
+dfTrain.condition <- data.transformed[inTrain.condition,]
+str(dfTrain.condition)
+dfTest.condition <- data.transformed[-inTrain.condition,]
+str(dfTest.condition)
+
+```
+
+```{r, Drop variables - Group variable run}
+ #drop vars
+ dfTrain.group <- dfTrain.group[ , -which(names(dfTrain.group) %in% c("Subject","Condition","Trial"))]
+ str(dfTrain.group)
+ dfTest.group <- dfTest.group[ , -which(names(dfTest.group) %in% c("Subject","Condition","Trial"))]
+ str(dfTest.group)
+```
+
+```{r set train control for models, include=T,echo=F,warning=FALSE,message=F}
+cv.control <- caret::trainControl(method= 'repeatedcv', number=10, repeats = 3)
+```
+
+
+## Tree - Group
+This model was run 3 separate times to get the needed results and those result were then combined into a joint variable.
+```{r, Tree - Group}
+
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+
+seed <- 702
+metric <- "Accuracy"
+
+#Tree - Training Error
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.group))
+tree.group <- train(Group~., data=dfTrain.group,trControl=cv.control, method="rpart", 
+                     metric=metric,
+                     tuneLength = 15,
+                     preProcess = c("center", "scale")                                                      
+                     )
+
+ #model summary
+ tree.group
+ tree.group$results
+ plot(tree.group)
+ 
+
+ #make preds
+ tree.preds.group <- stats::predict(tree.group, data = dfTrain.group)
+ 
+ #confusion matrix for results
+ tree.cf <- caret::confusionMatrix(data = tree.preds.group, reference = dfTrain.group$Group)
+ tree.cf$overall
+
+ #get accuracy measures
+ 
+ ### 
+ df <- as.data.frame(tree.group$results$Accuracy)
+
+ ###
+ cv.accuracy <- which.max(df$`tree.group$results$Accuracy`)
+ cv.accuracy.bestmod <- df[cv.accuracy,]
+ cv.accuracy.bestmod
+ ###
+
+ test.error <- tree.cf$overall[1]
+
+ test.error.df <- data.frame()
+
+ ###
+ test.error.df.final <- data.frame()
+ test.error.df.final <- data.frame("Model" = "RPART",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+ kable(test.error.df.final)
+
+
+```
+
+
+## KNN - Group
+```{r,KNN - Group,include=F,echo=F,warning=FALSE,message=F}
+  #Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+  seed <- 702
+  metric <- "Accuracy"
+
+  #KNN - Training Error
+  #control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+  set.seed(seed)
+  mtry <- sqrt(ncol(dfTrain.group))
+  knn.group <- train(Group~., data=dfTrain.group,trControl=cv.control, method="knn", 
+               metric=metric,
+               tuneLength = 15,   
+               preProcess = c("center", "scale")   
+               )
+  
+  #model summary
+  knn.group
+
+
+  #make preds
+  knn.preds.group <- stats::predict(knn.group, data = dfTrain.group)
+  #knn.preds.comb$Condition<- knn.preds
+ 
+  #confusion matrix for results
+  knn.cf <- caret::confusionMatrix(data = knn.preds.group, reference = dfTrain.group$Group)
+  knn.cf$overall
+
+  #get accuracy measures
+ 
+  ### 
+  df <- as.data.frame(knn.group$results$Accuracy)
+
+  ###
+  cv.accuracy <- which.max(df$`knn.group$results$Accuracy`)
+  cv.accuracy.bestmod <- df[cv.accuracy,]
+  cv.accuracy.bestmod
+  ###
+  test.error <- knn.cf$overall[1]
+
+  test.error.df <- data.frame()
+
+  ###
+  test.error.df.final <- data.frame()
+  test.error.df.final <- data.frame("Model" = "KNN",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+  kable(test.error.df.final)
+```
+
+
+## Random Forest - Group
+```{r, Random Forest - Group, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+seed <- 702
+metric <- "Accuracy"
+
+#Random Forest - Training Error
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.group))
+rf.group <- train(Group~., data=dfTrain.group,trControl=cv.control, method="rf", 
+                            metric=metric,
+                            tuneLength = 15,  
+                            preProcess = c("center", "scale") 
+                            )
+#model summary
+ rf.group
+ rf.group$results
+ plot(rf.group)
+ 
+
+ #make preds
+ rf.preds.group <- stats::predict(rf.group, data = dfTrain.group)
+
+#confusion matrix for results
+rf.cf <- caret::confusionMatrix(data = rf.preds.group, reference = dfTrain.group$Group)
+rf.cf$overall
+
+#get accuracy measures
+ 
+### 
+df <- as.data.frame(rf.group$results$Accuracy)
+
+###
+cv.accuracy <- which.max(df$`rf.group$results$Accuracy`)
+cv.accuracy.bestmod <- df[cv.accuracy,]
+cv.accuracy.bestmod
+###
+test.error <- rf.cf$overall[1]
+
+test.error.df <- data.frame()
+
+###
+test.error.df.final <- data.frame()
+test.error.df.final <- data.frame("Model" = "Random Forest",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+kable(test.error.df.final)
+
+#variable importance
+varImp <- caret::varImp(rf.group)
+varImp.df <- data.frame(varImp[[1]])
+varImp.df <- cbind(Variable = rownames(varImp.df), varImp.df) 
+ggplot(data=varImp.df, aes(reorder(Variable, Overall), Overall)) + 
+geom_col() + 
+geom_bar(stat="identity") +
+coord_flip() 
+#+ theme(axis.text.x = element_text(face="normal", color="#993333", size=8, angle=45))
+
+```
+
+
+```{r, Drop variables - Subject variable run}
+ #drop vars
+ dfTrain.subject <- dfTrain.subject[ , -which(names(dfTrain.subject) %in% c("Condition","Group","Trial"))]
+ str(dfTrain.subject)
+ dfTest.subject <- dfTest.subject[ , -which(names(dfTest.subject) %in% c("Condition","Group","Trial"))]
+ str(dfTest.subject)
+```
+
+
+
+## Tree - Subject 
+This model was run 3 separate times to get the needed results and those result were then combined into a joint variable.
+```{r, Tree - Subject, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+
+ seed <- 702
+ metric <- "Accuracy"
+
+ #Tree - Training Error
+ #control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+ set.seed(seed)
+ mtry <- sqrt(ncol(dfTrain.subject))
+ tree.subject <- train(Subject~., data=dfTrain.subject,trControl=cv.control, method="rpart",
+                      metric=metric,
+                      tuneLength = 15,
+                      preProcess = c("center", "scale")
+                      )
+
+ #model summary
+ tree.subject
+ tree.subject$results
+ plot(tree.subject)
+
+ #make preds
+ tree.preds.subject <- stats::predict(tree.subject, data = dfTrain.subject)
+
+ #confusion matrix for results
+  tree.cf <- caret::confusionMatrix(data = tree.preds.subject, reference = dfTrain.subject$Subject)
+  tree.cf$overall
+
+ #get accuracy measures
+
+ ###
+ df <- as.data.frame(tree.subject$results$Accuracy)
+
+ ###
+ cv.accuracy <- which.max(df$`tree.subject$results$Accuracy`)
+ cv.accuracy.bestmod <- df[cv.accuracy,]
+ cv.accuracy.bestmod
+ ###
+ test.error <- tree.cf$overall[1]
+
+ test.error.df <- data.frame()
+
+ ###
+ test.error.df.final <- data.frame()
+ test.error.df.final <- data.frame("Model" = "RPART",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+ kable(test.error.df.final)
+
+
+```
+
+
+## KNN - Subject
+```{r,KNN Subject,include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+seed <- 702
+metric <- "Accuracy"
+
+#KNN - Training Error
+#control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.subject))
+knn.subject <- train(Subject~., data=dfTrain.subject,trControl=cv.control, method="knn",
+             metric=metric,
+              tuneLength = 15,
+              preProcess = c("center", "scale")
+              #preProcess = c("pca")
+                  )
+ #model summary
+ knn.subject
+
+ #make preds
+ knn.preds.subject <- stats::predict(knn.subject, data = dfTrain.subject)
+ #knn.preds.comb$Condition<- knn.preds
+
+ #confusion matrix for results
+ knn.cf <- caret::confusionMatrix(data = knn.preds.subject, reference = dfTrain.subject$Subject)
+ knn.cf$overall
+
+#get accuracy measures
+
+###
+df <- as.data.frame(knn.subject$results$Accuracy)
+
+###
+cv.accuracy <- which.max(df$`knn.subject$results$Accuracy`)
+cv.accuracy.bestmod <- df[cv.accuracy,]
+cv.accuracy.bestmod
+###
+test.error <- knn.cf$overall[1]
+
+test.error.df <- data.frame()
+
+###
+test.error.df.final <- data.frame()
+test.error.df.final <- data.frame("Model" = "KNN",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+kable(test.error.df.final)
+```
+
+## Random Forest - Subject
+```{r, Random Forest - Subject, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+ seed <- 702
+ metric <- "Accuracy"
+
+#Random Forest - Training Error
+#control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.subject))
+rf.subject <- train(Subject~., data=dfTrain.subject,trControl=cv.control, method="rf",
+                            metric=metric,
+                            tuneLength = 15,
+                            preProcess = c("center", "scale")
+                              )
+ #model summary
+ rf.subject
+ rf.subject$results
+ plot(rf.subject)
+
+ #make preds
+ rf.preds.subject <- stats::predict(rf.subject, data = dfTrain.subject)
+
+ #confusion matrix for results
+ rf.cf <- caret::confusionMatrix(data = rf.preds.subject, reference = dfTrain.subject$Subject)
+ rf.cf$overall
+
+ #get accuracy measures
+
+ ###
+ df <- as.data.frame(rf.subject$results$Accuracy)
+
+ ###
+ cv.accuracy <- which.max(df$`rf.subject$results$Accuracy`)
+ cv.accuracy.bestmod <- df[cv.accuracy,]
+ cv.accuracy.bestmod
+ ###
+ test.error <- rf.cf$overall[1]
+
+ test.error.df <- data.frame()
+
+ ###
+ test.error.df.final <- data.frame()
+ test.error.df.final <- data.frame("Model" = "Random Forest",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+ kable(test.error.df.final)
+
+ #variable importance
+ varImp <- caret::varImp(rf.subject)
+ varImp.df <- data.frame(varImp[[1]])
+ varImp.df <- cbind(Variable = rownames(varImp.df), varImp.df)
+ ggplot(data=varImp.df, aes(reorder(Variable, Overall), Overall)) +
+ geom_col() +
+ geom_bar(stat="identity") +
+ coord_flip()
+ #+theme(axis.text.x = element_text(face="normal", color="#993333", size=8, angle=45))
+
+```
+
+```{r, Drop variables - Condition variable run}
+ #drop vars
+ dfTrain.condition <- dfTrain.condition[ , -which(names(dfTrain.condition) %in% c("Subject","Group","Trial"))]
+ str(dfTrain.condition)
+ dfTest.condition <- dfTest.condition[ , -which(names(dfTest.condition) %in% c("Subject","Group","Trial"))]
+ str(dfTest.condition)
+```
+
+## Tree - Condition
+```{r, Tree Condtition, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+
+seed <- 702
+metric <- "Accuracy"
+
+#Tree - Training Error
+#control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.condition))
+tree.condition <- train(Condition~., data=dfTrain.condition,trControl=cv.control, method="rpart", 
+                     metric=metric,
+                     tuneLength = 15,
+                     preProcess = c("center", "scale")                                                      
+                     )
+
+#model summary
+ tree.condition
+ tree.condition$results
+ plot(tree.condition)
+ 
+ #make preds
+ tree.preds.condition <- stats::predict(tree.condition, data = dfTrain.condition)
+
+ #confusion matrix for results
+  tree.cf <- caret::confusionMatrix(data = tree.preds.condition, reference = dfTrain.condition$Condition)
+  tree.cf$overall
+
+#get accuracy measures
+ 
+### 
+df <- as.data.frame(tree.condition$results$Accuracy)
+
+###
+cv.accuracy <- which.max(df$`tree.condition$results$Accuracy`)
+cv.accuracy.bestmod <- df[cv.accuracy,]
+cv.accuracy.bestmod
+###
+test.error <- tree.cf$overall[1]
+
+test.error.df <- data.frame()
+
+###
+test.error.df.final <- data.frame()
+test.error.df.final <- data.frame("Model" = "RPART",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+kable(test.error.df.final)
+
+
+```
+
+
+## KNN - Condition
+```{r,KNN Condition,include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+seed <- 702
+metric <- "Accuracy"
+
+#KNN - Training Error
+#control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.condition))
+knn.condition <- train(Condition~., data=dfTrain.condition,trControl=cv.control, method="knn", 
+             metric=metric,
+              tuneLength = 15,   
+              preProcess = c("center", "scale")   
+              #preProcess = c("pca")                            
+                  )
+ #model summary
+ knn.condition
+
+ #make preds
+ knn.preds.condition <- stats::predict(knn.condition, data = dfTrain.condition)
+ #knn.preds.comb$Condition<- knn.preds
+ 
+ #confusion matrix for results
+ knn.cf <- caret::confusionMatrix(data = knn.preds.condition, reference = dfTrain.condition$Condition)
+ knn.cf$overall
+
+#get accuracy measures
+ 
+### 
+df <- as.data.frame(knn.condition$results$Accuracy)
+
+###
+cv.accuracy <- which.max(df$`knn.condition$results$Accuracy`)
+cv.accuracy.bestmod <- df[cv.accuracy,]
+cv.accuracy.bestmod
+###
+test.error <- knn.cf$overall[1]
+
+test.error.df <- data.frame()
+
+###
+test.error.df.final <- data.frame()
+test.error.df.final <- data.frame("Model" = "KNN",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+kable(test.error.df.final)
+```
+
+
+## Random Forest - Condition
+```{r, Random Forest Condition, include=F,echo=F,warning=FALSE,message=F}
+#Code Source: https://machinelearningmastery.com/tune-machine-learning-algorithms-in-r/
+
+seed <- 702
+metric <- "Accuracy"
+
+#Random Forest - Training Error
+#control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
+set.seed(seed)
+mtry <- sqrt(ncol(dfTrain.condition))
+rf.condition <- train(Condition~., data=dfTrain.condition,trControl=cv.control, method="rf", 
+                            metric=metric,
+                            tuneLength = 15,  
+                            preProcess = c("center", "scale") 
+                              )
+#model summary
+ rf.condition
+ rf.condition$results
+ plot(rf.condition)
+ 
+ #make preds
+ rf.preds.condition <- stats::predict(rf.condition, data = dfTrain.condition)
+
+ 
+#confusion matrix for results
+rf.cf <- caret::confusionMatrix(data = rf.preds.condition, reference = dfTrain.condition$Condition)
+rf.cf$overall
+
+### 
+df <- as.data.frame(rf.condition$results$Accuracy)
+
+###
+cv.accuracy <- which.max(df$`rf.condition$results$Accuracy`)
+cv.accuracy.bestmod <- df[cv.accuracy,]
+cv.accuracy.bestmod
+###
+test.error <- rf.cf$overall[1]
+
+test.error.df <- data.frame()
+
+###
+test.error.df.final <- data.frame()
+test.error.df.final <- data.frame("Model" = "Random Forest",CV.Accuracy = cv.accuracy.bestmod, Test.Error = test.error)
+
+kable(test.error.df.final)
+
+#variable importance
+varImp <- caret::varImp(rf.condition)
+varImp.df <- data.frame(varImp[[1]])
+varImp.df <- cbind(Variable = rownames(varImp.df), varImp.df) 
+ggplot(data=varImp.df, aes(reorder(Variable, Overall), Overall)) + 
+  geom_col() + 
+  geom_bar(stat="identity") +
+  coord_flip() 
+#+ theme(axis.text.x = element_text(face="normal", color="#993333", size=8, angle=45))
+
+```
+
+
+
+##Prediction Script
+
+## Load dataset
+```{r Prediction Script }
+
+unlabeled.examp <- read.csv("unlab.example.trial.csv", 
+stringsAsFactors = F)[, -1]
+
+```
+
+##Remove columns with 0 values
+```{r, Remove columns}
+unlabeled.examp <- unlabeled.examp[, -(15:16)]
+
+head(unlabeled.examp)
+```
+
+
+```{r, Data Conversion Unlabeled, include=T,echo=F,warning=FALSE,message=F}
+
+unlabeled.examp$Trial <- as.factor(unlabeled.examp$Trial) 
+
+str(unlabeled.examp)
+```
+
+```{r}
+
+#Making the Means vectors for each Trial
+unlab.dat.means <- NULL
+
+uni.vars.unl <- unique(unlabeled.examp$Trial)
+
+for (i in uni.vars.unl){
+unlab.dat.i=unlabeled.examp[i==unlabeled.examp$Trial, ]
+unlab.mean.i=colMeans(unlab.dat.i[,-1])
+unlab.dat.means=rbind(unlab.dat.means, unlab.mean.i)
+}
+
+head(unlab.dat.means)
+
+formatted.unlab <- unlab.dat.means
+
+head(formatted.unlab)
+```
+
+
+
+```{r}
+
+pred.group <- stats::predict(rf.group$finalModel,newdata = formatted.unlab)
+pred.subject <- stats::predict(rf.subject$finalModel,newdata = formatted.unlab)
+pred.condition <- stats::predict(rf.condition$finalModel,newdata= formatted.unlab)
+
+group.dat <- as.data.frame(pred.group)
+subject.dat <- as.data.frame(pred.subject)
+condition.dat <- as.data.frame(pred.condition)
+
+group.dat[!complete.cases(group.dat),]
+subject.dat[!complete.cases(subject.dat),]
+condition.dat[!complete.cases(condition.dat),]
+
+names(group.dat)[names(group.dat) == "rf.group$finalModel$predicted"] <- "group_pred"
+names(subject.dat)[names(subject.dat) == "rf.subject$finalModel$predicted"] <- "subject_pred"
+names(condition.dat)[names(condition.dat) == "rf.condition$finalModel$predicted"] <- "condition_pred"
+
+pred.final <- cbind.data.frame(group.dat,subject.dat,condition.dat)
+
+pred.final.all <- apply(pred.final[, 1:3], 1, paste, collapse = ":")
+
+pred.final.all
+
+
+```
+
+
+
+```{r}
+stopCluster(cl)
+```
+

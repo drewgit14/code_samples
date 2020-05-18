@@ -1,0 +1,116 @@
+---
+title: "Final Project Part 2"
+author: "Andrew Marshall"
+date: "12/16/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,warning=FALSE)
+```
+
+```{r, Load libraries echo=FALSE, include=FALSE}
+#load libs
+#data manipulation and visuals
+library(caret)
+library(tidyverse)
+library(MASS)
+library(GGally)
+library(reshape2)
+library(ROCR)
+#recursive partitioning
+library(rpart)
+library(rpart.plot)
+library(partykit)
+library("mlbench")
+library("vcd")
+library("lattice")
+library("randomForest")
+library("party")
+library("mboost")
+library("TH.data")
+library("ipred")
+```
+
+```{r, Load data}
+
+data("schizophrenia2",package = "HSAUR3")
+data("schizophrenia2",package = "HSAUR3")
+
+```
+
+
+
+```{r, Prep dataset}
+#load Data
+#library(HSAUR3)
+#data(schizophrenia2)
+df_schiz <- as.data.frame(schizophrenia2)
+df_schiz$subject <- as.integer(df_schiz$subject) 
+df_schiz
+
+```
+
+#Initial Summary Statistics
+```{r}
+#library(tidyverse)
+attach(df_schiz)
+mean <- aggregate(month,by=list(df_schiz$onset), FUN=mean)
+stdev <- aggregate(month,by=list(df_schiz$onset), FUN=sd)
+results <- merge(mean, stdev, by=c("Group.1","Group.1"))
+colnames(results) <- c("Onset","Mean", "St Dev")
+results
+
+```
+
+#Poisson regression
+```{r, echo=FALSE}
+df_schiz_glm_1 <- glm(month~ onset, data = df_schiz, 
+                    family = poisson())
+summary(df_schiz_glm_1)
+detach(df_schiz)
+
+```
+
+#Setup of mosaic plot
+```{r, fig.align="center"}
+mosaicplot(xtabs( ~ onset + month + disorder, data = df_schiz))
+```
+
+#Generation of initial mosaic plot
+```{r,fig.align="center"}
+#Source;https://journal.r-project.org/archive/2013/RJ-2013-012/RJ-2013-012.pdf
+
+## suggested changes to the mosaic defaults:
+levels(df_schiz$disorder) <- c("A", "P")
+mosaic(disorder ~ month | onset, highlighting_fill = colors, data = df_schiz)
+#red - present,grey - absent, white - nA
+```
+
+
+```{r}
+#Source;https://journal.r-project.org/archive/2013/RJ-2013-012/RJ-2013-012.pdf
+
+## Additional Suggestions for ?schizophrenia2
+df_schiz <- schizophrenia2
+df_schiz$disorder <- factor(df_schiz$disorder, exclude=NULL)
+levels(df_schiz$disorder)[3] <- "dropout"
+
+```
+
+
+#Modified Mosaic Plot
+```{r,fig.align="center"}
+#Source;https://journal.r-project.org/archive/2013/RJ-2013-012/RJ-2013-012.pdf
+
+df_schiz$disorder <- factor(df_schiz$disorder, levels=rev(c("present", "absent", "dropout")))
+colors <- c("white", "grey80", "darkred")
+mosaic(disorder ~ month | onset, highlighting_fill = colors, data = df_schiz)
+
+```
+```{r,fig.align="center"}
+ggplot(data=df_schiz, aes(x=month, color= onset))+
+  geom_density()
+#higher number of people with onset > 20 years
+```
+

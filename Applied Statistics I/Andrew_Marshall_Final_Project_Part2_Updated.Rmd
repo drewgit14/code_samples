@@ -9,24 +9,24 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE,warning=FALSE)
 ```
 
-```{r, Load libraries echo=FALSE, include=FALSE}
+```{r, Load libraries echo=FALSE, include=FALSE, warning=FALSE}
 #load libs
 #data manipulation and visuals
 library(caret)
 library(tidyverse)
 library(MASS)
-library(GGally)
+#library(GGally)
 library(reshape2)
-library(ROCR)
+#library(ROCR)
 #recursive partitioning
 library(rpart)
 library(rpart.plot)
-library(partykit)
+#library(partykit)
 library("mlbench")
 library("vcd")
 library("lattice")
 library("randomForest")
-library("party")
+#library("party")
 library("mboost")
 library("TH.data")
 library("ipred")

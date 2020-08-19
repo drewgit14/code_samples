@@ -173,4 +173,6 @@ spark-warehouse/
 
 # End of https://www.toptal.com/developers/gitignore/api/spark
 
-.mp4
+*.mp4
+*.zip
+*.pdf

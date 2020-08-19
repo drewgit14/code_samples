@@ -1,0 +1,2957 @@
+Jul 25 22:19:27 -- ### WELCOME TO INVISIBLE INC. ###
+
+Jul 25 22:19:27 --   Build_Tag: Production-steam
+Jul 25 22:19:27 --   Build_Branch: trunk
+Jul 25 22:19:27 --   Build_Date: Tuesday June 28, 2016 at 12:37:39 AM
+Jul 25 22:19:27 --   Build_Version: 182614
+
+Jul 25 22:19:27 -- ### BEGIN LOG ###
+
+Jul 25 22:19:28 -- -- AKURunScript( 'config.lua' ) doesn't exist
+Jul 25 22:19:28 -- Hash validate: hashes.dat
+Jul 25 22:19:28 -- moai.lua: cc8a909d9dc9193646647a3dcfa0d9a4 (OK)
+Jul 25 22:19:28 -- errata.kwad: 6da70b9a9f9274b1e3102e93c7cf0464 (OK)
+Jul 25 22:19:28 -- main.lua: 379b96c9c55f2388cf4d527868dd6c45 (OK)
+Jul 25 22:19:28 -- scripts.zip: 906712eb43dda77b14f66ec5e8966d8e (OK)
+Jul 25 22:19:28 -- 	0 fails for 4 hashes.
+
+Jul 25 22:19:28 -- [LUA] CONFIG OPTIONS:
+	APP_GUID: dd4cbbb0-19f5-4b0a-b500-c4b4d79329b4
+	FORUM_URL = http://forums.kleientertainment.com/index.php?/forum/41-incognita-beta-general-discussion/
+	DEFAULTLVL = 
+	REPORT_URL = https://klei.slack.com/services/hooks/incoming-webhook?token=Bp6RZllRKiKSAOwp2DSDTgX8
+	LOG_FLAGS = table: 06DFEB80
+	CRASH_CHANNEL = #invinc-crashes-DLC1
+	SRC_MEDIA = game
+	TUNING = table: 06DFEC48
+	MANUAL_CAM = false
+	GUI_MEDIA = data/gui
+	SOUND_OCCLUSION = true
+	SIGNUP_URL = https://clientservice.kleientertainment.com/maillist
+	SHOW_CONSOLE = false
+	WARPSPEED = 1
+	NOSAVES = false
+	NOSPLASH = false
+	DBG_CAM = false
+	SOUND_DBG_FILTER = HUD/
+	SIM_DATA = 
+	NEXT_UPDATE_TIME = table: 06DFEAB8
+	NOSOUND = false
+	WATERMARK = 
+	LAST_UPDATE_TIME = table: 06DFEB30
+	SHOW_MOVIE = true
+	SOUND_MEDIA = 
+	NO_AI_TRACKS = false
+	RECORD_MODE = false
+	DEV = false
+	CAMPAIGN_HOURS = 72
+	DBG_FILE = 
+	LOCALSEED = function: 04A03220
+	PATCHNOTES_URL = http://invisibleincgame.com/updates
+	CLOUDSAVES = true
+	METRIC_URL = https://metric.kleientertainment.com/write
+	SAVE_MAP_PNGS = false
+	LAUNCHLVL = 
+Jul 25 22:19:28 -- MMapStream::Open( sound.kwad ): success
+
+Jul 25 22:19:28 -- MMapStream::SetupViews( sound.kwad, 0x00000000, 0x250c3fcc ): success (largest block was 0x7eb10000)
+Jul 25 22:19:28 -- MMapStream::Open( gui.kwad ): success
+
+Jul 25 22:19:28 -- MMapStream::SetupViews( gui.kwad, 0x00000000, 0x043aa9e2 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:28 -- MMapStream::Open( anims.kwad ): success
+
+Jul 25 22:19:28 -- MMapStream::SetupViews( anims.kwad, 0x00000000, 0x03e855a8 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:28 -- MMapStream::Open( characters.kwad ): success
+
+Jul 25 22:19:28 -- MMapStream::SetupViews( characters.kwad, 0x00000000, 0x08d6a51c ): success (largest block was 0x7eb10000)
+Jul 25 22:19:29 -- MMapStream::Open( images.kwad ): success
+
+Jul 25 22:19:29 -- MMapStream::SetupViews( images.kwad, 0x00000000, 0x0017bdc6 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:29 -- MMapStream::Open( errata.kwad ): success
+
+Jul 25 22:19:29 -- MMapStream::SetupViews( errata.kwad, 0x00000000, 0x00007a61 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:29 -- MMapStream::Open( movies.kwad ): success
+
+Jul 25 22:19:29 -- MMapStream::SetupViews( movies.kwad, 0x00000000, 0x0b856ed0 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:29 -- [LUA] Mod manager enumerating dlc [dlc]
+Jul 25 22:19:29 -- KLEISteamWorkshop::ownsDLC [dlc1] yes
+Jul 25 22:19:29 -- [LUA] Found dlc [dlc1] in [dlc/dlc1] owned
+Jul 25 22:19:29 -- [LUA] initMod - dlc/dlc1
+Jul 25 22:19:29 -- [LUA] 	property: [name] = [Contingency Plan]
+Jul 25 22:19:29 -- [LUA] 	property: [icon] = [gui/icons/contingency_plan.png]
+Jul 25 22:19:29 -- [LUA] 	property: [author] = [Klei]
+Jul 25 22:19:29 -- [LUA] 	NAME: Contingency Plan
+Jul 25 22:19:29 -- [LUA] 	ICON: Contingency Plan
+Jul 25 22:19:29 -- [LUA] 	AUTHOR: Contingency Plan
+Jul 25 22:19:29 -- [LUA] Mod manager enumerating mods [mods]
+Jul 25 22:19:29 -- [LUA] Found mod [workshop-492172658] in [mods/workshop-492172658]
+Jul 25 22:19:29 -- [LUA] initMod - mods/workshop-492172658
+Jul 25 22:19:29 -- [LUA] 	Missing 'mods/workshop-492172658/modinfo.txt' -- ignoring.
+Jul 25 22:19:29 -- [LUA]  ### Sending app_metrics (launch)...
+Jul 25 22:19:29 -- [LUA] { os_build = 23F0, os_version = 6.2, version = 182614, user = 9563104@steam, os = Windows (WOW64), event = launch, app_guid = dd4cbbb0-19f5-4b0a-b500-c4b4d79329b4, branch = trunk }
+Jul 25 22:19:29 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:29 -- [LUA] settings.data = 
+table: 42618A30
+{
+    enableLightingFX = true,
+    showSubtitles = true,
+    enableBackgroundFX = true,
+    edgePanDist = 1,
+    gfx = table: 426186E8
+    {
+        winFlags = 0,
+        iFrequency = 60,
+        bVsync = true,
+        winMinPositionY = -1,
+        winShow = 1,
+        winHeight = 1080,
+        winMaxPositionY = -1,
+        winMinPositionX = -1,
+        aspectConstraint = 1.7777777910233,
+        width = 1920,
+        winMaxPositionX = -1,
+        winPositionX = 24,
+        bFullscreen = true,
+        winPositionY = 1,
+        dx11 = false,
+        height = 1080,
+        sDisplay = \\.\DISPLAY2,
+        winWidth = 1920,
+    },
+    edgePanSpeed = 1,
+    volumeMusic = 1,
+    version = 3,
+    enableBloom = true,
+    volumeSfx = 1,
+    enableOptionalDecore = true,
+}
+Jul 25 22:19:30 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:30 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:30 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:30 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:30 --    TEXTURE: '-'          0 =   0.00MB < 
+Jul 25 22:19:30 -- [LUA] Mod update not scheduled.
+Jul 25 22:19:30 -- [LUA] Mounting mods...
+Jul 25 22:19:30 -- [LUA] Pre localization mounting for content mod [dlc/dlc1/scripts.zip] scripts at: [dlc1]
+Jul 25 22:19:30 -- [LUA] 	Executing pre localization 'dlc1/modinit.lua':
+Jul 25 22:19:30 -- [LUA] 	MOD-INITSTRINGS OK
+Jul 25 22:19:30 -- [LUA] Language selection: 
+Jul 25 22:19:30 -- [LUA] Mounting content mod [dlc/dlc1/scripts.zip] scripts at: [dlc1]
+Jul 25 22:19:30 -- [LUA] 	Executing 'dlc1/modinit.lua':
+Jul 25 22:19:30 -- MMapStream::Open( dlc/dlc1/gui.kwad ): success
+
+Jul 25 22:19:31 -- MMapStream::SetupViews( dlc/dlc1/gui.kwad, 0x00000000, 0x004aff1f ): success (largest block was 0x7eb10000)
+Jul 25 22:19:31 -- MMapStream::Open( dlc/dlc1/images.kwad ): success
+
+Jul 25 22:19:31 -- MMapStream::SetupViews( dlc/dlc1/images.kwad, 0x00000000, 0x00003c98 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:31 -- MMapStream::Open( dlc/dlc1/sound.kwad ): success
+
+Jul 25 22:19:31 -- MMapStream::SetupViews( dlc/dlc1/sound.kwad, 0x00000000, 0x01063672 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:31 -- MMapStream::Open( dlc/dlc1/characters.kwad ): success
+
+Jul 25 22:19:31 -- MMapStream::SetupViews( dlc/dlc1/characters.kwad, 0x00000000, 0x00766268 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:31 -- MMapStream::Open( dlc/dlc1/anims.kwad ): success
+
+Jul 25 22:19:31 -- MMapStream::SetupViews( dlc/dlc1/anims.kwad, 0x00000000, 0x00585190 ): success (largest block was 0x7eb10000)
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( extended_campaign, EXTENDED CAMPAIGN )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( agents, EXTRA AGENTS )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( programs, EXTRA PROGRAMS )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( guards, MORE ENEMY TYPES )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( daemons, MORE DAEMONS )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( sidemissions, NEW SIDE MISSIONS )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( extended_endless, MORE ENDLESS )
+Jul 25 22:19:31 -- [LUA] mod_api[dlc1]:addGenerationOption( endless_mid_mission, ENDLESS CONTINGENCY MISSION )
+Jul 25 22:19:31 -- [LUA] ResetItemDefs()
+Jul 25 22:19:31 -- [LUA] ResetGuardDefs()
+Jul 25 22:19:31 -- [LUA] ResetStoryScripts()
+Jul 25 22:19:31 -- [LUA] ResetAgentDefs()
+Jul 25 22:19:31 -- [LUA] ResetPropDefs()
+Jul 25 22:19:31 -- [LUA] ResetSelectablePrograms()
+Jul 25 22:19:31 -- [LUA] ResetSelectableAgents()
+Jul 25 22:19:31 -- [LUA] ResetAgentLoadouts()
+Jul 25 22:19:31 -- [LUA] ResetDaemonAbilities()
+Jul 25 22:19:31 -- [LUA] ResetUnitDefsPotential()
+Jul 25 22:19:31 -- [LUA] ResetSituations()
+Jul 25 22:19:31 -- [LUA] ResetLogs()
+Jul 25 22:19:31 -- [LUA] ResetDaemonDefs()
+Jul 25 22:19:31 -- [LUA] ResetGuardsWorldGen()
+Jul 25 22:19:31 -- [LUA] 	MOD-INIT OK
+Jul 25 22:19:31 -- [LUA] ResetProgramDefs()
+Jul 25 22:19:31 -- [LUA] ResetStoreItems()
+Jul 25 22:19:31 -- [LUA] 	splash:onLoad()
+Jul 25 22:19:31 -- [LUA] 	splash:onLoad() - activated screen
+Jul 25 22:19:31 -- [LUA] 	splash:onLoad() - applying settings screen
+Jul 25 22:19:31 --    TEXTURE: '+'    1638400 =   1.56MB < 
+Jul 25 22:19:31 -- Received stats and achievements from Steam
+Jul 25 22:19:31 -- [LUA] DBG MODE: [0]
+Jul 25 22:19:31 -- [LUA] DBG MODE: [0]
+Jul 25 22:19:31 -- [LUA] 	splash:onUpdate() - activating main menu
+Jul 25 22:19:31 -- [LUA] mod_manager:resetContent()
+Jul 25 22:19:31 -- [LUA] ResetAgentDefs()
+Jul 25 22:19:31 -- [LUA] ResetItemDefs()
+Jul 25 22:19:31 -- [LUA] ResetGuardDefs()
+Jul 25 22:19:31 -- [LUA] ResetProgramDefs()
+Jul 25 22:19:31 -- [LUA] ResetDaemonDefs()
+Jul 25 22:19:31 -- [LUA] ResetAgentLoadouts()
+Jul 25 22:19:31 -- [LUA] ResetSelectableAgents()
+Jul 25 22:19:31 -- [LUA] ResetSelectablePrograms()
+Jul 25 22:19:31 -- [LUA] ResetDaemonAbilities()
+Jul 25 22:19:31 -- [LUA] ResetStoreItems()
+Jul 25 22:19:31 -- [LUA] ResetMetaDefs()
+Jul 25 22:19:31 -- [LUA] ResetUnitDefsPotential()
+Jul 25 22:19:31 -- [LUA] ResetSituations()
+Jul 25 22:19:31 -- [LUA] ResetStoryScripts()
+Jul 25 22:19:31 -- [LUA] ResetPropDefs()
+Jul 25 22:19:31 -- [LUA] ResetGuardsWorldGen()
+Jul 25 22:19:31 -- [LUA] 	mainmenu:onLoad() - playing title theme
+Jul 25 22:19:31 --    TEXTURE: '+'    8294400 =   9.47MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'   16777216 =  25.47MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'    8294400 =  33.38MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'   16777216 =  49.38MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'   16777216 =  65.38MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'   16777216 =  81.38MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'         64 =  81.38MB < 
+Jul 25 22:19:32 --    TEXTURE: '+'     131072 =  81.51MB < 
+Jul 25 22:19:33 -- [LUA] HTTP 200: 0 bytes (nil) 
+Jul 25 22:19:51 --    TEXTURE: '+'    2097152 =  83.51MB < 
+Jul 25 22:19:51 --    TEXTURE: '+'         64 =  83.51MB < 
+Jul 25 22:19:51 --    TEXTURE: '+'       1600 =  83.51MB < 
+Jul 25 22:19:51 --    TEXTURE: '+'     524288 =  84.01MB < 
+Jul 25 22:19:54 --    TEXTURE: '+'      20736 =  84.03MB < 
+Jul 25 22:19:54 --    TEXTURE: '+'      20736 =  84.05MB < 
+Jul 25 22:19:54 --    TEXTURE: '+'       4096 =  84.05MB < 
+Jul 25 22:19:54 --    TEXTURE: '+'       4096 =  84.06MB < 
+Jul 25 22:19:56 --    TEXTURE: '+'      20736 =  84.08MB < 
+Jul 25 22:19:59 --    TEXTURE: '+'       1600 =  84.08MB < 
+Jul 25 22:19:59 --    TEXTURE: '+'       1600 =  84.08MB < 
+Jul 25 22:19:59 --    TEXTURE: '+'       1600 =  84.08MB < 
+Jul 25 22:20:01 --    TEXTURE: '+'       1600 =  84.08MB < 
+Jul 25 22:20:01 --    TEXTURE: '+'       1600 =  84.08MB < 
+Jul 25 22:20:01 --    TEXTURE: '+'     131072 =  84.21MB < 
+Jul 25 22:20:02 --    TEXTURE: '+'     131072 =  84.33MB < 
+Jul 25 22:20:03 -- [LUA] Showing Steam Workshop...
+Jul 25 22:20:14 -- [LUA] No content mods loaded.
+Jul 25 22:20:14 -- [LUA] Updating mods...
+Jul 25 22:20:14 -- GetCachedUGCCount 0
+Jul 25 22:20:15 -- EnumerateUserSubscribedFiles(0)
+Jul 25 22:20:15 -- OnEnumerateUserSubscribedFilesResult 
+Jul 25 22:20:15 --    EResult 1, results 1/1
+Jul 25 22:20:15 -- Enum complete. Found 1 mods.
+Jul 25 22:20:15 -- DeleteUnsubscribedFiles [mods]
+Jul 25 22:20:15 -- FindDirectoriesMatching [mods/workshop-*]
+Jul 25 22:20:15 -- GetPublishedFileDetails(0)
+Jul 25 22:20:15 -- Getting mod details...
+Jul 25 22:20:15 -- OnPublishedFileDetailsResult 
+Jul 25 22:20:15 --    EResult 1, 492172658
+Jul 25 22:20:15 --    354750, 243970, [Mod Loader for Invisible Inc Update 11], [To install:
+1. Subscribe to this mod
+2. Go into Invisible Inc, and press Refresh Languages
+3. Make a backup of main.lua in your root directory
+4. Go into the mod directory and find this readme.txt 
+5. Copy all files into the game's root directory
+6. Launch Invisible, Inc, and enjoy some simple mod support
+
+Check mods/sample to see how to publish your own compatible workshop mod.], 443955291032979999, 443954577385657118, 76561198009275369, 1438448987, 1439064493, 0, 0, [language], 0, [mod_publish_data_file.zip], 3514622, 739836, [], 0
+Jul 25 22:20:15 -- Mod listing complete.
+Jul 25 22:20:15 -- DownloadPublishedFile(0)
+Jul 25 22:20:15 -- Downloading mod file 443955291032979999 [mod_publish_data_file.zip] [Mod Loader for Invisible Inc Update 11]...
+Jul 25 22:20:18 -- OnDownloadPublishedFileResult 
+Jul 25 22:20:18 --    EResult 1, 443955291032979999
+Jul 25 22:20:18 --    354750, 3514622, [mod_publish_data_file.zip], 76561198009275369
+Jul 25 22:20:18 -- UnpackMod 443955291032979999 [mod_publish_data_file.zip] [Mod Loader for Invisible Inc Update 11]
+Jul 25 22:20:18 -- Working Path: R:/Steam/steamapps/common/InvisibleInc/
+Jul 25 22:20:18 -- KLEISteamWorkshop::UnzipMod mods/workshop-492172658
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/readme.txt] 407 bytes
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/InvisibleInc/main.lua] 8894 bytes
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/InvisibleInc/scripts_ml.zip] 2162260 bytes
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/InvisibleInc/mods/sample/main.lua] 168 bytes
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/InvisibleInc/mods/sample/modinfo.txt] 43 bytes
+Jul 25 22:20:18 -- WriteModFile [mods/workshop-492172658/InvisibleInc/mods/sample/preview.png] 1532947 bytes
+Jul 25 22:20:18 -- Mod downloads complete.
+Jul 25 22:20:18 -- GetCachedUGCCount 0
+Jul 25 22:20:18 -- KLEISteamWorkshop::CompleteCallback (success, Mods were updated.)
+Jul 25 22:20:18 -- [LUA] KLEISteamWorkshop.EVENT_REFRESH_COMPLETE - (succeeded, Mods were updated.)
+Jul 25 22:20:18 -- [LUA] Mod manager enumerating mods [mods]
+Jul 25 22:20:18 -- [LUA] Found mod [workshop-492172658] in [mods/workshop-492172658]
+Jul 25 22:20:18 -- [LUA] initMod - mods/workshop-492172658
+Jul 25 22:20:18 -- [LUA] 	Missing 'mods/workshop-492172658/modinfo.txt' -- ignoring.
+Jul 25 22:20:18 -- [LUA] Re-populating language mods...
+Jul 25 22:20:18 --    TEXTURE: '+'     131072 =  84.46MB < 
+Jul 25 22:20:26 --    TEXTURE: '+'     131072 =  84.58MB < 
+Jul 25 22:20:28 --    TEXTURE: '+'     208320 =  84.78MB < 
+Jul 25 22:20:28 --    TEXTURE: '+'      16384 =  84.80MB < 
+Jul 25 22:20:28 --    TEXTURE: '+'     262144 =  85.05MB < 
+Jul 25 22:20:28 --    TEXTURE: '+'      16384 =  85.06MB < 
+Jul 25 22:20:29 --    TEXTURE: '+'     208320 =  85.26MB < 
+Jul 25 22:20:34 -- [LUA] 	mainmenu:onLoad() - assigning agent image 'spec_ops'
+Jul 25 22:20:34 -- [LUA] generationOptions:refreshGenerationOptions()
+Jul 25 22:20:34 -- [LUA] generationOptions:selectDifficulty
+Jul 25 22:20:34 -- [LUA]    selected: BEGINNER
+Jul 25 22:20:34 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:20:34 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:20:34 --    TEXTURE: '+'    8294400 =  93.17MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    2888960 =  95.93MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    2888960 =  98.68MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    2888960 = 101.44MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    2888960 = 104.19MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    8294400 = 112.10MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'   16777216 = 128.10MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'     921600 = 128.98MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    4677120 = 133.44MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    1935360 = 135.29MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'   18696960 = 153.12MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'    2097152 = 155.12MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'     131072 = 155.24MB < 
+Jul 25 22:20:34 --    TEXTURE: '+'     524288 = 155.74MB < 
+Jul 25 22:20:37 -- [LUA] select_dlc_dialog:show()
+Jul 25 22:20:37 -- [LUA] select_dlc_dialog:init()
+Jul 25 22:20:37 -- [LUA] CHANGED: dlc1
+Jul 25 22:20:37 -- [LUA] select_dlc_dialog:onLoad()
+Jul 25 22:20:37 --    TEXTURE: '+'        576 = 155.75MB < 
+Jul 25 22:20:39 --    TEXTURE: '+'     131072 = 155.87MB < 
+Jul 25 22:20:41 -- [LUA] CHANGED: dlc1
+Jul 25 22:20:42 -- [LUA] CHANGED: dlc1
+Jul 25 22:20:42 -- [LUA] select_dlc_dialog:onClickAccept()
+Jul 25 22:20:42 -- [LUA] select_dlc_dialog:getModStates
+Jul 25 22:20:42 -- [LUA]    dlc1 true
+Jul 25 22:20:42 -- [LUA] select_dlc_dialog:onUnload()
+Jul 25 22:20:42 -- [LUA] generationOptions:refreshGenerationOptions()
+Jul 25 22:20:42 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:20:42 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:21:03 -- [LUA] mod_manager:resetContent()
+Jul 25 22:21:03 -- [LUA] ResetAgentDefs()
+Jul 25 22:21:03 -- [LUA] ResetItemDefs()
+Jul 25 22:21:03 -- [LUA] ResetGuardDefs()
+Jul 25 22:21:03 -- [LUA] ResetProgramDefs()
+Jul 25 22:21:03 -- [LUA] ResetDaemonDefs()
+Jul 25 22:21:03 -- [LUA] ResetAgentLoadouts()
+Jul 25 22:21:03 -- [LUA] ResetSelectableAgents()
+Jul 25 22:21:03 -- [LUA] ResetSelectablePrograms()
+Jul 25 22:21:03 -- [LUA] ResetDaemonAbilities()
+Jul 25 22:21:03 -- [LUA] ResetStoreItems()
+Jul 25 22:21:03 -- [LUA] ResetMetaDefs()
+Jul 25 22:21:03 -- [LUA] ResetUnitDefsPotential()
+Jul 25 22:21:03 -- [LUA] ResetSituations()
+Jul 25 22:21:03 -- [LUA] ResetStoryScripts()
+Jul 25 22:21:03 -- [LUA] ResetPropDefs()
+Jul 25 22:21:03 -- [LUA] ResetGuardsWorldGen()
+Jul 25 22:23:23 -- [LUA] teamPreview:onLoad()
+Jul 25 22:23:24 --    TEXTURE: '+'    1048576 = 156.87MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 157.12MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      10000 = 157.13MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      10000 = 157.14MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 157.39MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      16384 = 157.40MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      10000 = 157.41MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     131072 = 157.54MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'       1024 = 157.54MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      10000 = 157.55MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 157.80MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      65536 = 157.86MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     151552 = 158.01MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      51840 = 158.06MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     524288 = 158.56MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     131072 = 158.68MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      51840 = 158.73MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     524288 = 159.23MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 159.48MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 159.73MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 159.98MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 160.23MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 160.48MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 160.73MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 160.98MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 161.23MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 161.48MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 161.73MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 161.98MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     262144 = 162.23MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'       4096 = 162.23MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'     524288 = 162.73MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'      65536 = 162.80MB < 
+Jul 25 22:23:24 --    TEXTURE: '+'    1048576 = 163.80MB < 
+Jul 25 22:23:30 --    TEXTURE: '-'          0 = 163.80MB < movieV
+Jul 25 22:23:30 --    TEXTURE: '-'          0 = 163.80MB < movieU
+Jul 25 22:23:30 --    TEXTURE: '-'          0 = 163.80MB < movieY
+Jul 25 22:23:32 --    TEXTURE: '+'      10000 = 163.81MB < 
+Jul 25 22:23:32 --    TEXTURE: '+'      10000 = 163.82MB < 
+Jul 25 22:23:47 --    TEXTURE: '+'      16384 = 163.83MB < 
+Jul 25 22:23:54 --    TEXTURE: '+'      10000 = 163.84MB < 
+Jul 25 22:24:05 --    TEXTURE: '+'      10000 = 163.85MB < 
+Jul 25 22:24:05 --    TEXTURE: '+'      10000 = 163.86MB < 
+Jul 25 22:24:13 --    TEXTURE: '+'      10000 = 163.87MB < 
+Jul 25 22:24:13 --    TEXTURE: '+'      10000 = 163.88MB < 
+Jul 25 22:24:13 --    TEXTURE: '+'      65536 = 163.94MB < 
+Jul 25 22:24:38 --    TEXTURE: '+'      10000 = 163.95MB < 
+Jul 25 22:24:38 --    TEXTURE: '+'      10000 = 163.96MB < 
+Jul 25 22:24:38 --    TEXTURE: '+'      10000 = 163.97MB < 
+Jul 25 22:24:58 --    TEXTURE: '+'      10000 = 163.98MB < 
+Jul 25 22:24:58 --    TEXTURE: '+'      10000 = 163.99MB < 
+Jul 25 22:25:13 --    TEXTURE: '+'      10000 = 164.00MB < 
+Jul 25 22:25:13 --    TEXTURE: '+'      10000 = 164.01MB < 
+Jul 25 22:26:38 --    TEXTURE: '+'      51840 = 164.06MB < 
+Jul 25 22:26:42 --    TEXTURE: '+'      51840 = 164.11MB < 
+Jul 25 22:26:43 --    TEXTURE: '+'      51840 = 164.16MB < 
+Jul 25 22:26:44 --    TEXTURE: '+'      51840 = 164.21MB < 
+Jul 25 22:26:45 --    TEXTURE: '+'      51840 = 164.26MB < 
+Jul 25 22:27:10 --    TEXTURE: '+'      51840 = 164.31MB < 
+Jul 25 22:27:20 --    TEXTURE: '+'      51840 = 164.35MB < 
+Jul 25 22:27:21 --    TEXTURE: '+'      51840 = 164.40MB < 
+Jul 25 22:27:21 --    TEXTURE: '+'      51840 = 164.45MB < 
+Jul 25 22:27:21 --    TEXTURE: '+'      51840 = 164.50MB < 
+Jul 25 22:28:01 -- [LUA] 	mainmenu:onLoad() - assigning agent image 'spec_ops'
+Jul 25 22:28:01 -- [LUA] generationOptions:refreshGenerationOptions()
+Jul 25 22:28:01 -- [LUA] generationOptions:selectDifficulty
+Jul 25 22:28:01 -- [LUA]    selected: BEGINNER
+Jul 25 22:28:01 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:28:01 -- [LUA] generationOptions:applyDLCOptions
+Jul 25 22:28:04 -- [LUA] mod_manager:resetContent()
+Jul 25 22:28:04 -- [LUA] ResetAgentDefs()
+Jul 25 22:28:04 -- [LUA] ResetItemDefs()
+Jul 25 22:28:04 -- [LUA] ResetGuardDefs()
+Jul 25 22:28:04 -- [LUA] ResetProgramDefs()
+Jul 25 22:28:04 -- [LUA] ResetDaemonDefs()
+Jul 25 22:28:04 -- [LUA] ResetAgentLoadouts()
+Jul 25 22:28:04 -- [LUA] ResetSelectableAgents()
+Jul 25 22:28:04 -- [LUA] ResetSelectablePrograms()
+Jul 25 22:28:04 -- [LUA] ResetDaemonAbilities()
+Jul 25 22:28:04 -- [LUA] ResetStoreItems()
+Jul 25 22:28:04 -- [LUA] ResetMetaDefs()
+Jul 25 22:28:04 -- [LUA] ResetUnitDefsPotential()
+Jul 25 22:28:04 -- [LUA] ResetSituations()
+Jul 25 22:28:04 -- [LUA] ResetStoryScripts()
+Jul 25 22:28:04 -- [LUA] ResetPropDefs()
+Jul 25 22:28:04 -- [LUA] ResetGuardsWorldGen()
+Jul 25 22:28:04 -- [LUA] teamPreview:onLoad()
+Jul 25 22:28:57 -- [LUA] NEW SITUATION{ table: 5A5C16A0
+{
+    1 = executive_terminals,
+    2 = ftm,
+    3 = ko,
+    4 = plastech,
+    5 = not_close,
+} } -- executive_terminals, 1, Thunder Bay
+Jul 25 22:28:57 --    TEXTURE: '+'    8294400 = 172.41MB < 
+Jul 25 22:28:57 --    TEXTURE: '+'    3847680 = 176.08MB < 
+Jul 25 22:29:01 --    TEXTURE: '+'    2097152 = 178.08MB < 
+Jul 25 22:29:03 --    TEXTURE: '+'    1543680 = 179.55MB < 
+Jul 25 22:29:03 --    TEXTURE: '+'       1600 = 179.56MB < 
+Jul 25 22:29:53 --    TEXTURE: '+'    2097152 = 181.56MB < 
+Jul 25 22:29:53 --    TEXTURE: '+'    4194304 = 185.56MB < 
+Jul 25 22:30:03 --    TEXTURE: '+'      32768 = 185.59MB < 
+Jul 25 22:30:03 --    TEXTURE: '+'      32768 = 185.62MB < 
+Jul 25 22:30:03 --    TEXTURE: '+'   16777216 = 201.62MB < 
+Jul 25 22:30:03 --    TEXTURE: '+'      16384 = 201.63MB < 
+Jul 25 22:30:03 --    TEXTURE: '+'      16384 = 201.65MB < 
+Jul 25 22:30:04 --    TEXTURE: '+'      16384 = 201.67MB < 
+Jul 25 22:30:05 --    TEXTURE: '+'     524288 = 202.17MB < 
+Jul 25 22:30:05 --    TEXTURE: '+'      65536 = 202.23MB < 
+Jul 25 22:30:05 --    TEXTURE: '+'      16384 = 202.24MB < 
+Jul 25 22:30:10 --    TEXTURE: '+'    4194304 = 206.24MB < 
+Jul 25 22:30:10 --    TEXTURE: '+'    4194304 = 210.24MB < 
+Jul 25 22:30:10 --    TEXTURE: '+'     131072 = 210.37MB < 
+Jul 25 22:30:10 --    TEXTURE: '+'     131072 = 210.49MB < 
+Jul 25 22:30:17 -- [LUA] ### CAMPAIGN [ executive_terminals, mission 0, 0 hrs, r0.17.17 ]
+### PARAMS: [ ftm, seed = 1211958912, difficulty = 1]
+Jul 25 22:30:17 --    TEXTURE: '+'    8294400 = 218.40MB < 
+Jul 25 22:30:17 --    TEXTURE: '+'      65536 = 218.47MB < 
+Jul 25 22:30:17 -- [LUA] LEVELGEN: seed = 1211958912, difficulty = 1, world = ftm, 
+Jul 25 22:30:18 -- [LUA] 	generateBlueprint(): 110 ms
+Jul 25 22:30:18 -- [LUA] 	PASS #1 == 1.00 (best so far #1 == 1.00)
+Jul 25 22:30:28 --    TEXTURE: '-'          0 = 218.47MB < 
+Jul 25 22:30:28 --    TEXTURE: '-'          0 = 218.47MB < 
+Jul 25 22:30:28 --    TEXTURE: '-'          0 = 218.47MB < 
+Jul 25 22:30:29 -- [LUA] generate3DWalls() -- took 459.0 ms
+Jul 25 22:30:29 -- [LUA] fullGC(): Took 84.9 ms for 40601 KB
+Jul 25 22:30:29 -- [LUA] ## Load screen took: 12050.0 ms
+Jul 25 22:30:29 --    TEXTURE: '+'   16777216 = 234.47MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'    4064256 = 238.34MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      65536 = 238.41MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      65536 = 238.47MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      65536 = 238.53MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      65536 = 238.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'    1048576 = 239.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'    1048576 = 240.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'   16777216 = 256.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'   16777216 = 272.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'   16777216 = 288.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'   16777216 = 304.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'    4194304 = 308.59MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      79336 = 308.67MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      17680 = 308.69MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      16384 = 308.70MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'     131072 = 308.83MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'       5184 = 308.83MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      16384 = 308.85MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      27936 = 308.87MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'       6480 = 308.88MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'       6480 = 308.89MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      12672 = 308.90MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      20628 = 308.92MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      14688 = 308.93MB < 
+Jul 25 22:30:30 --    TEXTURE: '+'      16384 = 308.95MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'      33280 = 308.98MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       6656 = 308.98MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'      16384 = 309.00MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'      16384 = 309.02MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'      10000 = 309.03MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       5184 = 309.03MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       5184 = 309.04MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       5184 = 309.04MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       5184 = 309.05MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       5184 = 309.05MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'     131072 = 309.18MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'     262144 = 309.43MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'      16384 = 309.44MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       1024 = 309.44MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'       4096 = 309.45MB < 
+Jul 25 22:31:00 --    TEXTURE: '+'    2097152 = 311.45MB < 
+Jul 25 22:31:02 --    TEXTURE: '+'      16384 = 311.46MB < 
+Jul 25 22:31:02 --    TEXTURE: '+'      16384 = 311.48MB < 
+Jul 25 22:31:04 --    TEXTURE: '+'       5184 = 311.48MB < 
+Jul 25 22:31:08 --    TEXTURE: '+'      10000 = 311.49MB < 
+Jul 25 22:31:28 --    TEXTURE: '+'       5184 = 311.50MB < 
+Jul 25 22:31:28 --    TEXTURE: '+'      10000 = 311.51MB < 
+Jul 25 22:31:31 --    TEXTURE: '+'      40000 = 311.54MB < 
+Jul 25 22:31:31 --    TEXTURE: '+'   16777216 = 327.54MB < 
+Jul 25 22:31:31 --    TEXTURE: '+'       2816 = 327.55MB < 
+Jul 25 22:31:31 --    TEXTURE: '+'      57600 = 327.60MB < 
+Jul 25 22:31:32 --    TEXTURE: '+'      10000 = 327.61MB < 
+Jul 25 22:31:38 --    TEXTURE: '+'      16384 = 327.63MB < 
+Jul 25 22:31:51 --    TEXTURE: '+'      27936 = 327.65MB < 
+Jul 25 22:31:52 -- [LUA] fullGC(): Took 41.0 ms for 2078 KB
+Jul 25 22:31:52 --    TEXTURE: '+'      20000 = 327.67MB < 
+Jul 25 22:31:52 --    TEXTURE: '+'     524288 = 328.17MB < 
+Jul 25 22:31:55 --    TEXTURE: '+'      88704 = 328.26MB < 
+Jul 25 22:31:56 -- [LUA] fullGC(): Took 32.4 ms for 111 KB
+Jul 25 22:31:58 --    TEXTURE: '+'     131072 = 328.38MB < 
+Jul 25 22:31:59 --    TEXTURE: '+'      32768 = 328.41MB < 
+Jul 25 22:32:07 --    TEXTURE: '+'      40000 = 328.45MB < 
+Jul 25 22:32:07 --    TEXTURE: '+'      10000 = 328.46MB < 
+Jul 25 22:32:27 --    TEXTURE: '+'      10000 = 328.47MB < 
+Jul 25 22:32:32 --    TEXTURE: '+'      16384 = 328.49MB < 
+Jul 25 22:32:32 --    TEXTURE: '+'       5184 = 328.49MB < 
+Jul 25 22:32:43 --    TEXTURE: '+'      10000 = 328.50MB < 
+Jul 25 22:32:43 --    TEXTURE: '+'      10000 = 328.51MB < 
+Jul 25 22:32:43 --    TEXTURE: '+'      10000 = 328.52MB < 
+Jul 25 22:33:03 -- [LUA] fullGC(): Took 38.6 ms for 1542 KB
+Jul 25 22:33:07 -- [LUA] fullGC(): Took 29.9 ms for 110 KB
+Jul 25 22:33:09 --    TEXTURE: '+'    2137444 = 330.56MB < 
+Jul 25 22:33:22 --    TEXTURE: '+'      16384 = 330.57MB < 
+Jul 25 22:33:24 --    TEXTURE: '+'       6480 = 330.58MB < 
+Jul 25 22:33:24 --    TEXTURE: '+'      12672 = 330.59MB < 
+Jul 25 22:33:24 --    TEXTURE: '+'       6480 = 330.60MB < 
+Jul 25 22:34:05 -- [LUA] fullGC(): Took 35.2 ms for 302 KB
+Jul 25 22:34:08 --    TEXTURE: '+'      16384 = 330.61MB < 
+Jul 25 22:34:11 --    TEXTURE: '+'      16640 = 330.63MB < 
+Jul 25 22:34:11 --    TEXTURE: '+'       5888 = 330.64MB < 
+Jul 25 22:34:11 --    TEXTURE: '+'       6400 = 330.64MB < 
+Jul 25 22:34:20 -- [LUA] fullGC(): Took 37.7 ms for 2058 KB
+Jul 25 22:34:21 --    TEXTURE: '+'       5184 = 330.65MB < 
+Jul 25 22:34:21 --    TEXTURE: '+'      10000 = 330.66MB < 
+Jul 25 22:34:21 --    TEXTURE: '+'      10000 = 330.67MB < 
+Jul 25 22:34:24 --    TEXTURE: '+'     524288 = 331.17MB < 
+Jul 25 22:34:24 --    TEXTURE: '+'    1048576 = 332.17MB < 
+Jul 25 22:34:24 --    TEXTURE: '+'      40000 = 332.20MB < 
+Jul 25 22:34:24 --    TEXTURE: '+'      40000 = 332.24MB < 
+Jul 25 22:34:24 --    TEXTURE: '+'      40000 = 332.28MB < 
+Jul 25 22:34:35 --    TEXTURE: '+'       6400 = 332.29MB < 
+Jul 25 22:34:35 --    TEXTURE: '+'      10000 = 332.30MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'      79336 = 332.37MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'       8192 = 332.38MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'       5184 = 332.38MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'      65536 = 332.45MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'     131072 = 332.57MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'      65536 = 332.63MB < 
+Jul 25 22:36:13 --    TEXTURE: '+'      10000 = 332.64MB < 
+Jul 25 22:36:15 --    TEXTURE: '+'      10000 = 332.65MB < 
+Jul 25 22:36:21 --    TEXTURE: '+'       5184 = 332.66MB < 
+Jul 25 22:36:21 --    TEXTURE: '+'      26244 = 332.68MB < 
+Jul 25 22:37:01 --    TEXTURE: '+'      14688 = 332.70MB < 
+Jul 25 22:37:02 -- [LUA] fullGC(): Took 42.2 ms for 2346 KB
+Jul 25 22:37:04 -- [LUA] fullGC(): Took 37.4 ms for 2246 KB
+Jul 25 22:38:29 -- [LUA] fullGC(): Took 39.6 ms for 1948 KB
+Jul 25 22:38:31 --    TEXTURE: '+'      66048 = 332.76MB < 
+Jul 25 22:38:33 -- [LUA] fullGC(): Took 38.9 ms for 1931 KB
+Jul 25 22:39:34 -- [LUA] fullGC(): Took 44.9 ms for 3313 KB
+Jul 25 22:39:36 -- [LUA] fullGC(): Took 40.3 ms for 2281 KB
+Jul 25 22:40:38 -- [LUA] fullGC(): Took 39.0 ms for 1758 KB
+Jul 25 22:40:41 -- [LUA] fullGC(): Took 36.4 ms for 1501 KB
+Jul 25 22:41:21 -- [LUA] fullGC(): Took 39.4 ms for 1781 KB
+Jul 25 22:41:24 -- [LUA] fullGC(): Took 37.4 ms for 2085 KB
+Jul 25 22:41:36 --    TEXTURE: '+'       6400 = 332.77MB < 
+Jul 25 22:41:36 --    TEXTURE: '+'      23716 = 332.79MB < 
+Jul 25 22:41:46 --    TEXTURE: '+'      65536 = 332.85MB < 
+Jul 25 22:42:05 -- [LUA] fullGC(): Took 44.2 ms for 2694 KB
+Jul 25 22:42:14 -- [LUA] fullGC(): Took 36.7 ms for 1361 KB
+Jul 25 22:42:14 --    TEXTURE: '+'       6400 = 332.86MB < 
+Jul 25 22:42:34 --    TEXTURE: '+'      40000 = 332.90MB < 
+Jul 25 22:43:10 -- [LUA] fullGC(): Took 46.3 ms for 2903 KB
+Jul 25 22:43:15 -- [LUA] fullGC(): Took 36.9 ms for 322 KB
+Jul 25 22:43:54 -- [LUA] fullGC(): Took 44.6 ms for 3177 KB
+Jul 25 22:43:58 -- [LUA] fullGC(): Took 40.6 ms for 2586 KB
+Jul 25 22:44:11 --    TEXTURE: '+'      20628 = 332.92MB < 
+Jul 25 22:44:45 -- [LUA] fullGC(): Took 42.9 ms for 2382 KB
+Jul 25 22:44:50 -- [LUA] fullGC(): Took 35.2 ms for 394 KB
+Jul 25 22:45:54 -- [LUA] fullGC(): Took 37.4 ms for 1757 KB
+Jul 25 22:46:01 -- [LUA] fullGC(): Took 48.1 ms for 1051 KB
+Jul 25 22:46:07 --    TEXTURE: '+'     603200 = 333.49MB < 
+Jul 25 22:46:29 -- [LUA] fullGC(): Took 33.9 ms for 602 KB
+Jul 25 22:46:40 -- [LUA] fullGC(): Took 39.8 ms for 1885 KB
+Jul 25 22:46:58 --    TEXTURE: '+'      40000 = 333.53MB < 
+Jul 25 22:47:01 --    TEXTURE: '+'      10000 = 333.54MB < 
+Jul 25 22:47:37 -- [LUA] fullGC(): Took 40.8 ms for 1881 KB
+Jul 25 22:47:44 -- [LUA] fullGC(): Took 41.0 ms for 874 KB
+Jul 25 22:48:14 -- [LUA] fullGC(): Took 42.0 ms for 2462 KB
+Jul 25 22:48:21 -- [LUA] fullGC(): Took 38.1 ms for 666 KB
+Jul 25 22:49:22 --    TEXTURE: '+'      23716 = 333.56MB < 
+Jul 25 22:49:34 -- [LUA] fullGC(): Took 42.7 ms for 2213 KB
+Jul 25 22:49:43 -- [LUA] fullGC(): Took 42.4 ms for 1742 KB
+Jul 25 22:50:23 -- [LUA] fullGC(): Took 47.1 ms for 2429 KB
+Jul 25 22:50:28 -- [LUA] fullGC(): Took 37.5 ms for 251 KB
+Jul 25 22:51:18 -- [LUA] fullGC(): Took 45.1 ms for 2600 KB
+Jul 25 22:51:20 -- [LUA] fullGC(): Took 41.1 ms for 3738 KB
+Jul 25 22:51:53 -- [LUA] fullGC(): Took 43.3 ms for 2090 KB
+Jul 25 22:52:01 --    TEXTURE: '+'      16384 = 333.58MB < 
+Jul 25 22:52:04 -- [LUA] fullGC(): Took 41.9 ms for 1594 KB
+Jul 25 22:52:44 -- [LUA] fullGC(): Took 48.2 ms for 2362 KB
+Jul 25 22:52:47 -- [LUA] fullGC(): Took 45.9 ms for 2826 KB
+Jul 25 22:53:06 -- [LUA] fullGC(): Took 45.2 ms for 2986 KB
+Jul 25 22:53:09 -- [LUA] fullGC(): Took 43.1 ms for 4050 KB
+Jul 25 22:53:13 --    TEXTURE: '+'      12544 = 333.59MB < 
+Jul 25 22:53:20 -- [LUA] Internationale escaped!
+Jul 25 22:53:20 -- [LUA] Banks escaped!
+Jul 25 22:53:20 -- [LUA] PC WINS!
+Jul 25 22:53:26 -- [LUA] fullGC(): Took 42.8 ms for 3538 KB
+Jul 25 22:53:26 -- [LUA] 	postgame:onLoad()
+Jul 25 22:53:26 -- [LUA] NEW SITUATION{ table: 5A5C1A10
+{
+    1 = 2max,
+    2 = ftm,
+    3 = ko,
+    4 = plastech,
+    5 = sankaku,
+    6 = vault,
+    7 = security,
+    8 = executive_terminals,
+    9 = server_farm,
+    10 = nanofab,
+    11 = cyberlab,
+    12 = detention_centre,
+} } -- detention_centre, 1, Madrid
+Jul 25 22:53:26 -- [LUA] NEW SITUATION{ table: 5A5C1A10
+{
+    1 = 2max,
+    2 = ftm,
+    3 = ko,
+    4 = plastech,
+    5 = sankaku,
+    6 = vault,
+    7 = security,
+    8 = executive_terminals,
+    9 = server_farm,
+    10 = nanofab,
+    11 = cyberlab,
+    12 = detention_centre,
+} } -- nanofab, 1, Moscow
+Jul 25 22:53:26 -- [LUA] NEW SITUATION{ table: 5A5C1A10
+{
+    1 = 2max,
+    2 = ftm,
+    3 = ko,
+    4 = plastech,
+    5 = sankaku,
+    6 = vault,
+    7 = security,
+    8 = executive_terminals,
+    9 = server_farm,
+    10 = nanofab,
+    11 = cyberlab,
+    12 = detention_centre,
+} } -- executive_terminals, 1, Kabul
+Jul 25 22:53:26 -- [LUA] NEW SITUATION{ table: 5A5C1A10
+{
+    1 = 2max,
+    2 = ftm,
+    3 = ko,
+    4 = plastech,
+    5 = sankaku,
+    6 = vault,
+    7 = security,
+    8 = executive_terminals,
+    9 = server_farm,
+    10 = nanofab,
+    11 = cyberlab,
+    12 = detention_centre,
+} } -- server_farm, 1, Atlanta
+Jul 25 22:53:26 -- [LUA] ACHIEVEMENT: GHOST_MOVES
+Jul 25 22:53:26 -- [LUA]  ### Sending level_finished...
+Jul 25 22:53:26 -- [LUA] { game_stats = { num_actions = 155, security_hacked = 12, num_turns = 22, play_t = 109851, credits_gained = 820, missions_completed_1 = 1, safes_looted = 5, guards_kod = 5, max_tracker = 22, result = win, credits = 1320 }, version = 182614, user = 9563104@steam, game_params = { missionCount = 0, progress = 12, game_number = 12, difficulty = 1, agency = { agents = table: 70F8F278 }, seed = 1211958912, campaignDifficulty = 1, situationName = executive_terminals, world = ftm }, event = level_finished, app_guid = dd4cbbb0-19f5-4b0a-b500-c4b4d79329b4, branch = trunk }
+Jul 25 22:53:26 -- Stored stats for Steam
+Jul 25 22:53:26 --    TEXTURE: '+'    2359296 = 335.84MB < 
+Jul 25 22:53:27 -- [LUA] HTTP 200: 0 bytes (nil) 
+Jul 25 22:53:27 --    TEXTURE: '+'     524288 = 336.34MB < 
+Jul 25 22:53:27 --    TEXTURE: '+'    4194304 = 340.34MB < 
+Jul 25 22:53:27 --    TEXTURE: '+'       6144 = 340.34MB < 
+Jul 25 22:53:29 --    TEXTURE: '+'       6144 = 340.35MB < 
+Jul 25 22:53:29 --    TEXTURE: '+'       6144 = 340.36MB < 
+Jul 25 22:53:30 --    TEXTURE: '+'       6144 = 340.36MB < 
+Jul 25 22:53:30 --    TEXTURE: '+'       6144 = 340.37MB < 
+Jul 25 22:53:30 --    TEXTURE: '+'       6144 = 340.37MB < 
+Jul 25 22:53:30 --    TEXTURE: '-'          0 = 340.37MB < 
+Jul 25 22:53:30 --    TEXTURE: '-'          0 = 340.37MB < 
+Jul 25 22:53:30 --    TEXTURE: '-'          0 = 340.37MB < 
+Jul 25 22:53:30 --    TEXTURE: '-'          0 = 340.37MB < 
+Jul 25 22:53:32 --    TEXTURE: '+'       9216 = 340.38MB < 
+Jul 25 22:53:32 --    TEXTURE: '+'       9216 = 340.39MB < 
+Jul 25 22:53:34 --    TEXTURE: '+'      16384 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 --    TEXTURE: '-'          0 = 340.41MB < 
+Jul 25 22:53:48 -- [LUA] fullGC(): Took 22.7 ms for 937 KB
+Jul 25 22:53:48 -- [LUA] ## Load screen took: 127.0 ms
+Jul 25 22:53:48 --    TEXTURE: '+'    1960000 = 342.28MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'    4194304 = 346.28MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'    1048576 = 347.28MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'    2097152 = 349.28MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'       4356 = 349.28MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'      40000 = 349.32MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'     131072 = 349.44MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'    1048576 = 350.44MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'      10000 = 350.45MB < 
+Jul 25 22:53:48 --    TEXTURE: '+'      16384 = 350.47MB < 
+Jul 25 22:53:58 --    TEXTURE: '+'    4194304 = 354.47MB < 
+Jul 25 22:53:58 --    TEXTURE: '+'    4194304 = 358.47MB < 
+Jul 25 22:54:01 --    TEXTURE: '+'    4194304 = 362.47MB < 
+Jul 25 22:54:01 --    TEXTURE: '+'      40000 = 362.51MB < 
+Jul 25 22:54:56 --    TEXTURE: '+'      16384 = 362.52MB < 
+Jul 25 22:54:56 --    TEXTURE: '+'      16384 = 362.54MB < 
+Jul 25 22:54:57 --    TEXTURE: '+'      16384 = 362.55MB < 
+Jul 25 22:54:57 --    TEXTURE: '+'      16384 = 362.57MB < 
+Jul 25 22:54:58 --    TEXTURE: '+'      65536 = 362.63MB < 
+Jul 25 22:55:03 --    TEXTURE: '+'      65536 = 362.69MB < 
+Jul 25 22:55:06 --    TEXTURE: '+'     131072 = 362.82MB < 
+Jul 25 22:55:22 -- [LUA] mod_manager:resetContent()
+Jul 25 22:55:22 -- [LUA] ResetAgentDefs()
+Jul 25 22:55:22 -- [LUA] ResetItemDefs()
+Jul 25 22:55:22 -- [LUA] ResetGuardDefs()
+Jul 25 22:55:22 -- [LUA] ResetProgramDefs()
+Jul 25 22:55:22 -- [LUA] ResetDaemonDefs()
+Jul 25 22:55:22 -- [LUA] ResetAgentLoadouts()
+Jul 25 22:55:22 -- [LUA] ResetSelectableAgents()
+Jul 25 22:55:22 -- [LUA] ResetSelectablePrograms()
+Jul 25 22:55:22 -- [LUA] ResetDaemonAbilities()
+Jul 25 22:55:22 -- [LUA] ResetStoreItems()
+Jul 25 22:55:22 -- [LUA] ResetMetaDefs()
+Jul 25 22:55:22 -- [LUA] ResetUnitDefsPotential()
+Jul 25 22:55:22 -- [LUA] ResetSituations()
+Jul 25 22:55:22 -- [LUA] ResetStoryScripts()
+Jul 25 22:55:22 -- [LUA] ResetPropDefs()
+Jul 25 22:55:22 -- [LUA] ResetGuardsWorldGen()
+Jul 25 22:55:22 -- [LUA] 	mainmenu:onLoad() - playing title theme
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      12544 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.81MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      23716 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 362.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      40000 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      23716 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      66048 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      26244 = 362.61MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.61MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.61MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       8192 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      40000 = 362.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      40000 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 362.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1048576 = 361.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 361.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     524288 = 360.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.98MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 360.96MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    2137444 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.92MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.91MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.91MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.91MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.91MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.88MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.88MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      40000 = 358.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     131072 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      57600 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      40000 = 358.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 358.61MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.61MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 358.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    2097152 = 356.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       4096 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.58MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 356.56MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.56MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6400 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6400 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6400 = 356.52MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.52MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6400 = 356.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5888 = 356.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16640 = 356.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 356.48MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.48MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6656 = 356.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 356.45MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.45MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      33280 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 356.42MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     603200 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 355.83MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.83MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 355.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.82MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 355.80MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.80MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 355.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      14688 = 355.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.77MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      14688 = 355.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20628 = 355.74MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.74MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20628 = 355.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      12672 = 355.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      12672 = 355.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6480 = 355.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6480 = 355.68MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.68MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6480 = 355.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       6480 = 355.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20000 = 355.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      27936 = 355.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      27936 = 355.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.60MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 355.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       5184 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.47MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      17680 = 355.45MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.45MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      79336 = 355.37MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.37MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      79336 = 355.30MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.30MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 355.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 355.27MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.27MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 355.02MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.02MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.02MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 355.02MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      32768 = 354.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       2816 = 354.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      88704 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 354.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1048576 = 353.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 353.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1048576 = 352.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 352.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'   16777216 = 336.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 336.90MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 336.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 336.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 336.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 336.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 336.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 336.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 336.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 336.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    4064256 = 332.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 332.78MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      65536 = 332.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 332.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    4194304 = 328.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 328.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    2097152 = 326.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 326.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    3847680 = 323.05MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 323.05MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    8294400 = 315.14MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 315.14MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 315.09MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 315.09MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 315.04MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 315.04MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.99MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.94MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.94MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.84MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.79MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.74MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.74MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.73MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.73MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.70MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.68MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.68MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.67MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.66MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.66MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.66MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.65MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.64MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.63MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.63MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.62MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      51840 = 314.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.57MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.56MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.56MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.55MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.54MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.53MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.52MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.52MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      10000 = 314.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 314.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 314.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 314.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 313.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 313.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 313.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 313.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 313.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 313.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 313.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 313.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 312.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 312.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 312.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 312.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 312.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 312.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 312.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 312.01MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 311.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.76MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 311.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.51MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       4096 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.26MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       1024 = 311.25MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.25MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 311.24MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.24MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 311.22MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 311.22MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 310.97MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 310.97MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 310.97MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     262144 = 310.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 310.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1048576 = 309.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 309.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 309.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    2097152 = 307.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 307.72MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'   18696960 = 289.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 289.89MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1935360 = 288.05MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 288.05MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    4677120 = 283.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 283.59MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     921600 = 282.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.71MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      16384 = 282.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.69MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     208320 = 282.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.49MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'     208320 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       1600 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       1600 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'       4096 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.29MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20736 = 282.27MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.27MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20736 = 282.25MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.25MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'      20736 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 282.23MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    8294400 = 274.32MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 274.32MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    8294400 = 266.41MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 266.41MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'    1638400 = 264.85MB < 
+Jul 25 22:55:22 --    TEXTURE: '-'          0 = 264.85MB < 
+Jul 25 22:55:22 -- [LUA] fullGC(): Took 50.5 ms for 340 KB
+Jul 25 22:55:22 -- [LUA] ## Load screen took: 115.0 ms
+Jul 25 22:55:23 --    TEXTURE: '+'    8294400 = 272.76MB < 
+Jul 25 22:55:23 --    TEXTURE: '+'    8294400 = 280.67MB < 
+Jul 25 22:55:23 --    TEXTURE: '+'    1638400 = 282.23MB < 
+Jul 25 22:55:33 -- [LUA] ### Shutting down...
+Jul 25 22:55:33 -- [LUA]  ### Sending app_metrics (quit)...
+Jul 25 22:55:33 -- [LUA] { idle_t = 0, new_games = 1, version = 182614, user = 9563104@steam, play_t = 2164, event = quit, app_guid = dd4cbbb0-19f5-4b0a-b500-c4b4d79329b4, branch = trunk }
+Jul 25 22:55:33 -- [LUA] 	Sending metrics...
+Jul 25 22:55:34 -- [LUA] HTTP 200: 0 bytes (nil) 
+Jul 25 22:55:34 -- [LUA] 	Saving settings...
+Jul 25 22:55:34 -- [LUA] 	Stopping main coroutine...
+Jul 25 22:55:34 -- _AKUShutdownFunc
+Jul 25 22:55:34 -- [LUA] 	Main coroutine stopped.
+Jul 25 22:55:34 -- WinLoop done.
+Jul 25 22:55:34 -- FinalizeSteam...
+Jul 25 22:55:34 -- FinalizeSteam complete.
+Jul 25 22:55:34 -- Main done.
+Jul 25 22:55:34 -- WinMain done.
